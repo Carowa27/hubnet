@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "../../start.css";
 import groupPictureCropped from "../assets/group-picture-cropped.png";
 import { useState } from "react";
 
