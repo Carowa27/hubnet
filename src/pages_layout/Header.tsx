@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import "../../start.css";
+import groupPictureCropped from "../assets/group-picture-cropped.png";
 
 export const Header = () => {
   return (
-    <>
-      <div className="header-img">header img</div>
+    <header>
+      <div className="header-img-container">
+        <img
+          className="header-img"
+          src={groupPictureCropped}
+          alt="group image of team"
+        />
+      </div>
       <div className="header-menu">
         <Link className="menu-link" to="/">
           Home
@@ -19,6 +26,6 @@ export const Header = () => {
           Community
         </Link>
       </div>
-    </>
+    </header>
   );
 };
