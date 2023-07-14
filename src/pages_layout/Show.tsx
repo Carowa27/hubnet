@@ -1,3 +1,7 @@
 export const Show = () => {
-  return <></>;
+  return (
+    <>
+      <h1>SHOW</h1>
+    </>
+  );
 };

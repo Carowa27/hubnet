@@ -1,3 +1,7 @@
 export const Producers = () => {
-  return <></>;
+  return (
+    <>
+      <h1>PRODUCERS</h1>
+    </>
+  );
 };
