@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "../../start.css";
 import groupPictureCropped from "../assets/group-picture-cropped.png";
+import { useState } from "react";
 
 export const Header = () => {
+  const [showShowsMenu, setShowShowsMenu] = useState(false);
   return (
     <header>
       <div className="header-img-container">
@@ -16,9 +18,17 @@ export const Header = () => {
         <Link className="menu-link" to="/">
           Home
         </Link>
-        <Link className="menu-link" to="/shows">
+        <div
+          className="menu-link menu-show-container"
+          onClick={() => {
+            setShowShowsMenu(!showShowsMenu);
+          }}
+        >
           Shows
-        </Link>
+          <div id="arrows">
+            {!showShowsMenu ? <span>&#5121;</span> : <span>&#5130;</span>}
+          </div>
+        </div>
         <Link className="menu-link" to="/producers">
           Producers
         </Link>
@@ -26,6 +36,13 @@ export const Header = () => {
           Community
         </Link>
       </div>
+      {showShowsMenu && (
+        <div className="menu-shows">
+          <div className="show-choice">Bladibla</div>
+          <div className="show-choice">Bladibla</div>
+          <div className="show-choice">Bladibla</div>
+        </div>
+      )}
     </header>
   );
 };

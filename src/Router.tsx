@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./pages_layout/Layout";
 import { Error } from "./pages_layout/Error";
 import { Home } from "./pages_layout/Home";
-import { Shows } from "./pages_layout/Shows";
+import { Show } from "./pages_layout/Show";
 import { Producers } from "./pages_layout/Producers";
 import { Community } from "./pages_layout/Community";
 
@@ -13,7 +13,7 @@ export const Router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       { path: "/", element: <Home></Home>, index: true },
-      { path: "/shows", element: <Shows></Shows> },
+      { path: "/shows:id", element: <Show></Show> },
       { path: "/producers", element: <Producers></Producers> },
       { path: "/community", element: <Community></Community> },
     ],
