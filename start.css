@@ -1,1 +1,29 @@
 /* TEMPORARY STYLING FILE */
+/*root*/
+html,
+body {
+  width: 100dvw;
+  margin: 0;
+}
+
+/* header */
+.header-img {
+  width: 100%;
+  height: fit-content;
+  background: rgb(161, 161, 161);
+}
+
+.header-menu {
+  width: 100%;
+  height: fit-content;
+  background: rgb(198, 198, 198);
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  font-variant: small-caps;
+}

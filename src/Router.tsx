@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./Layout";
-import { Error } from "./Error";
-import { Home } from "./Home";
-import { Shows } from "./Shows";
-import { Producers } from "./Producers";
-import { Community } from "./Community";
+import { Layout } from "./pages_layout/Layout";
+import { Error } from "./pages_layout/Error";
+import { Home } from "./pages_layout/Home";
+import { Shows } from "./pages_layout/Shows";
+import { Producers } from "./pages_layout/Producers";
+import { Community } from "./pages_layout/Community";
 
 export const Router = createBrowserRouter([
   {
