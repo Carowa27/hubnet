@@ -1,3 +1,7 @@
 export const Community = () => {
-  return <></>;
+  return (
+    <>
+      <h1>COMMUNITY</h1>
+    </>
+  );
 };
