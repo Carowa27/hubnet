@@ -26,7 +26,7 @@ _examples_
 
 ### Badges
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007acc) ![React](https://img.shields.io/badge/React-42b883)
+![TypeScript](https://img.shields.io/badge/TypeScript-007acc) ![React](https://img.shields.io/badge/React-61DBFB)
 
 ![axios](https://img.shields.io/badge/axios-9846A9)
 
