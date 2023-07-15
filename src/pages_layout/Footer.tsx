@@ -2,6 +2,11 @@ import MBTCLogo from "../assets/made-by-community-logo.png";
 import SCLogo from "../assets/starcitizen-logo.png";
 
 export const Footer = () => {
+  const getYear = () => {
+    const today = new Date();
+    const thisYear = today.getFullYear();
+    return thisYear;
+  };
   return (
     <div className="footer-container">
       <div className="footer-container-content">
@@ -23,7 +28,7 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <span>Carolina Warntorp & Jennifer McAllister &copy; 2022</span>
+      <span>Carolina Warntorp & Jennifer McAllister &copy; {getYear()}</span>
     </div>
   );
 };
