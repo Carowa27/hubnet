@@ -36,7 +36,7 @@
 }
 .menu-shows {
   border: 1px solid rgb(77, 77, 77);
-  background: rgb(198, 198, 198);
+  background: rgba(198, 198, 198, 0.9);
   min-width: 10rem;
   max-width: max-content;
   padding: 0.5rem 1rem;
@@ -44,6 +44,7 @@
   text-decoration: none;
   color: inherit;
   font-variant: small-caps;
+  position: absolute;
   z-index: 10;
 }
 .menu-show-container {
