@@ -68,3 +68,42 @@ body {
   border-bottom: none;
   padding-bottom: 0;
 }
+
+/*community page*/
+.community-header-container {
+  background: black;
+}
+.community-header {
+  font-variant: small-caps;
+  color: white;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+.connect-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+
+  font-size: large;
+}
+.img-container {
+  height: 3rem;
+}
+.img-discord {
+  height: 100%;
+  width: auto;
+}
+.voiceacting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 50vh;
+  font-size: large;
+}
+.video-container {
+  height: 80%;
+  width: 80%;
+  background-color: rgb(195, 195, 195);
+}
