@@ -70,6 +70,12 @@ body {
 }
 
 /*community page*/
+.community-container {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 .community-header-container {
   background: black;
 }
@@ -82,7 +88,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
 
   font-size: large;
 }
@@ -103,7 +108,6 @@ body {
   font-size: large;
 }
 .video-container {
-  height: 80%;
-  width: 80%;
-  background-color: rgb(195, 195, 195);
+  height: auto;
+  padding-bottom: 1rem;
 }
