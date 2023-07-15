@@ -1,10 +1,4 @@
 /* TEMPORARY STYLING FILE */
-/*root*/
-html,
-body {
-  width: 100dvw;
-  margin: 0;
-}
 
 /* header */
 .header-img-container {
@@ -20,7 +14,6 @@ body {
 }
 
 .header-menu {
-  width: 100%;
   height: fit-content;
   background: rgb(198, 198, 198);
   display: flex;
@@ -43,7 +36,7 @@ body {
 }
 .menu-shows {
   border: 1px solid rgb(77, 77, 77);
-  background: rgb(198, 198, 198);
+  background: rgba(198, 198, 198, 0.9);
   min-width: 10rem;
   max-width: max-content;
   padding: 0.5rem 1rem;
@@ -51,7 +44,8 @@ body {
   text-decoration: none;
   color: inherit;
   font-variant: small-caps;
-  z-index: 2;
+  position: absolute;
+  z-index: 10;
 }
 .menu-show-container {
   display: flex;
@@ -67,4 +61,47 @@ body {
 .show-choice:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+/*community page*/
+.community-container {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.community-header-container {
+  background: black;
+}
+.community-header {
+  font-variant: small-caps;
+  color: white;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+.connect-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: large;
+}
+.img-container {
+  height: 3rem;
+}
+.img-discord {
+  height: 100%;
+  width: auto;
+}
+.voiceacting-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 50vh;
+  font-size: large;
+}
+.video-container {
+  height: auto;
+  padding-bottom: 1rem;
 }
