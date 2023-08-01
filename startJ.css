@@ -1,19 +1,36 @@
 /* TEMPORARY STYLING FILE */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 /* DEFAULT */
 
 * {
     margin: 0;
     padding: 0;
+    color: #c5c5c5;
+    font-family: 'Gruppo', sans-serif;
 }
+
+Link:hover {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: 0px;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+  }
 
 
 
 /* HOME */
 
 .home-content {
+    width: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +57,7 @@
 .background-video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .video-overlay {
