@@ -14,7 +14,7 @@ export const Router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       { path: "/", element: <Home></Home>, index: true },
-      { path: "/shows:id", element: <Show></Show> },
+      { path: "/:showsid", element: <Show></Show> },
       { path: "/producers", element: <Producers></Producers> },
       { path: "/community", element: <Community></Community> },
       { path: "/faq", element: <FAQ></FAQ> },

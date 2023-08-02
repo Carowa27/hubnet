@@ -32,24 +32,24 @@ return (
             {showShowsMenu && (
             <div className="menu-shows">
                 <div className="menu-shows-container">  
-                    <div className="show-choice">Ava IRL</div>
-                    <div className="show-choice">Chronicles of Stanton</div>
-                    <div className="show-choice">Emergence</div>
-                    <div className="show-choice">Guidance</div>
+                    <Link className="show-choice" to="/AvaIRL">Ava IRL</Link>
+                    <Link className="show-choice" to="/ChroniclesofStanton">Chronicles of Stanton</Link>
+                    <Link className="show-choice" to="/Emergence">Emergence</Link>
+                    <Link className="show-choice" to="/Guidance">Guidance</Link>
                 </div>
                 <div className="menu-divider" />
                 <div className="menu-shows-container">
-                    <div className="show-choice">Hubwire Galactic</div>
-                    <div className="show-choice">JACK! of Spades</div>
-                    <div className="show-choice">OnTrack</div>
-                    <div className="show-choice">OVERCLOCKED</div>
+                    <Link className="show-choice" to="/HubwireGalactic">Hubwire Galactic</Link>
+                    <Link className="show-choice" to="/JACKofSpades">JACK! of Spades</Link>
+                    <Link className="show-choice" to="/OnTrack">OnTrack</Link>
+                    <Link className="show-choice" to="/OVERCLOCKED">OVERCLOCKED</Link>
                 </div>
                 <div className="menu-divider" />
                 <div className="menu-shows-container">
-                    <div className="show-choice">Piracy and the Industrial Worker</div>
-                    <div className="show-choice">Red Line</div>
-                    <div className="show-choice">The Spin</div>
-                    <div className="show-choice">The 'Verse View</div>
+                    <Link className="show-choice" to="/PiracyandtheIndustrialWorker">Piracy and the Industrial Worker</Link>
+                    <Link className="show-choice" to="/RedLine">Red Line</Link>
+                    <Link className="show-choice" to="/TheSpin">The Spin</Link>
+                    <Link className="show-choice" to="/TheVerseView">The 'Verse View</Link>
                 </div>
             </div>
         )}

@@ -99,6 +99,10 @@
   display: flex;
 }
 
+.show-choice {
+  text-decoration: none;
+}
+
 
 /*community page*/
 .community-container {
