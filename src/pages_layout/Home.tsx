@@ -1,4 +1,4 @@
-import { Shows } from "../models/Shows";
+import { Shows } from "../data/Shows";
 import { ShowsSmall } from "../components/ShowSmall";
 import { Show } from "../models/Show";
 import hubnetLogo from "../assets/hubnet-white.png";
