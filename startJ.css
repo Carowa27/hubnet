@@ -8,7 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    color: #c5c5c5;
+    color: white;
     font-family: 'Gruppo', sans-serif;
 }
 
@@ -31,13 +31,17 @@ html {
   }
 
 body {
-    background-color: #090909;
+    background-color: #000000;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, button {
     text-transform: uppercase;
     font-family: 'Krona One', sans-serif;
     color: white;
+}
+
+.material-symbols-outlined {
+    width: 20px;
 }
 
 /* HEADER */
@@ -50,7 +54,7 @@ h1, h2, h3, h4, h5 {
 
 .hubnet-logo-container {
     position: absolute;
-    height: 70vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -60,6 +64,11 @@ h1, h2, h3, h4, h5 {
 .hubnet-logo-container img {
     height: 30%;
     max-width: 50%;
+}
+
+.header-title {
+    margin: 0 50px;
+    text-transform: uppercase;
 }
 
 /* HOME */
@@ -189,6 +198,96 @@ h1, h2, h3, h4, h5 {
     font-size: 10px;
 }
 
+/* SHOW */
+  
+
+.show-content {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-content-first-section {
+    width: 90vw;
+}
+
+.show-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90vw;
+    position: absolute;
+    top: 75vh;
+}
+
+.show-title-container {
+    width: 52%;
+    margin: 10px;
+}
+
+.show-text-container p {
+    font-size: 20px;
+    width: 50%;
+}
+
+.show-youtube-section {
+    width: 100%;
+    height: 700px ;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.show-youtube-character-container {
+    height: 500px;
+    overflow: hidden;
+    position: absolute;
+    top: 200px;
+    left: 35%;
+}
+
+.show-youtube-character-container img {
+    height: 800px;
+
+}
+
+.show-content-second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100vw;
+    background: #0b0b0e;
+
+}
+
+.show-produced-by-container {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: space-between;
+}
+
+.show-produced-by-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+
+.show-produced-by-container span{
+    font-size: 25px;
+}
+
+
+
+
+
 
 
 
@@ -199,7 +298,7 @@ h1, h2, h3, h4, h5 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #090909;
+    background-color: black;
     height: 25vh;
 }
 

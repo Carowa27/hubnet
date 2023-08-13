@@ -5,6 +5,8 @@ export class Show {
         public id: string,
         public name: string,
         public color: string,
+        public textcolor: string,
+        public mirrored: boolean,
         public title: string,
         public description: string,
         public shortDescription: string,
