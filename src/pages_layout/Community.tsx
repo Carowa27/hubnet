@@ -29,6 +29,16 @@ export const Community = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe> */}
+            {/* <iframe
+              width="100%"
+              height="auto"
+              src="https://www.youtube.com/embed/HZz-JVYoIJA"
+              title="The HUBNET FLIX-MIX events will help you create any STAR CITIZEN video imaginable!"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe> */}
+            VIDEO
           </div>
         </div>
       </div>
