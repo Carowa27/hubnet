@@ -13,13 +13,18 @@ export const ShowCarousel = () => {
       setEnd(end - 3);
     } else return;
   };
+
   const arrowRFunction = () => {
     if (end !== Shows.length) {
       setStart(start + 3);
       setEnd(end + 3);
     } else return;
   };
-  console.log(start, end);
+  const dotFunction = (i: number) => {
+    setStart(Math.ceil(i * 3)), setEnd(Math.ceil(i * 3 + 2));
+  };
+
+  const totalDots = Math.ceil(Shows.length / 3);
   return (
     <>
       <section
@@ -79,8 +84,15 @@ export const ShowCarousel = () => {
             justifyContent: "center",
           }}
         >
-          <Dot />
-          <FilledDot />
+          {Array.from({ length: totalDots }).map((_, i) => {
+            const isInRange =
+              Math.ceil(i * 3 + 2) >= start && Math.ceil(i * 3 + 2) <= end;
+            return isInRange ? (
+              <FilledDot key={i} dotFunction={dotFunction} i={i} />
+            ) : (
+              <Dot key={i} dotFunction={dotFunction} i={i} />
+            );
+          })}
         </div>
       </section>
     </>
