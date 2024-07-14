@@ -31,6 +31,11 @@ body {
 .card:hover .showOnHover {
   display: block;
 }
+.card:hover {
+  -webkit-box-shadow: 0px 4px 4px 0px #000000;
+  -moz-box-shadow: 0px 4px 4px 0px #000000;
+  box-shadow: 0px 4px 4px 0px #000000;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
