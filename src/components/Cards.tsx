@@ -46,7 +46,9 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
               >
                 {show.producer.name}
               </h4>
-              <p style={{ margin: 0, color: "#326BD9" }}>Read more &gt;</p>
+              <p style={{ margin: 0, marginBottom: "10px", color: "#326BD9" }}>
+                Read more &gt;
+              </p>
             </div>
             <div style={{ gridColumn: "3", textAlign: "right" }}>
               <img

@@ -4,7 +4,12 @@ import { ArrowLeftButton, ArrowRightButton, Dot, FilledDot } from "./Buttons";
 import { ShowCard } from "./Cards";
 import { HubwireGalactic } from "@/data/newly created files/ZarkMedia";
 import { Shows } from "@/data/Shows";
-export const ShowCarousel = () => {
+
+interface ShowCarouselParams {
+  homePage: boolean;
+}
+
+export const ShowCarousel = ({ homePage }: ShowCarouselParams) => {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(2);
   const arrowLFunction = () => {
@@ -32,7 +37,7 @@ export const ShowCarousel = () => {
           display: "grid",
           gridTemplateColumns: "repeat(9,1fr)",
           gap: "10px",
-          gridAutoRows: "minmax(100px, auto)",
+          gridAutoRows: "minmax(10px, auto)",
         }}
       >
         <div
@@ -57,7 +62,7 @@ export const ShowCarousel = () => {
         >
           {Shows.map((show, i) => {
             if (i >= start && i <= end) {
-              return <ShowCard show={show} homePage={true} />;
+              return <ShowCard show={show} homePage={homePage} />;
             } else return;
           })}
         </div>
