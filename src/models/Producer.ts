@@ -12,7 +12,7 @@ class Socialmedia {
   constructor(public media: Socials, public URL: string) {}
 }
 
-enum Socials {
+export enum Socials {
   YOUTUBE = "Youtube",
   TWITCH = "Twitch",
   DISCORD = "Discord",
