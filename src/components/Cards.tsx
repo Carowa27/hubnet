@@ -10,7 +10,11 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
   return (
     <>
       <section
+        className="card"
         style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
           border: "green 2px solid",
           padding: "10px",
           borderRadius: "10px",
@@ -26,7 +30,7 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
             gridAutoRows: "minmax(100px, auto)",
           }}
         >
-          <div style={{ gridColumn: "1" }}>
+          <div className="showOnHover" style={{ gridColumn: "1" }}>
             <h4>Producer</h4>
             <h5>{show.producer.name}</h5>
             <p>Read more</p>
@@ -39,9 +43,13 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
             />
           </div>
         </div>
-        <h3>{show.name}</h3>
-        <p>{show.description}</p>
-        <YoutubeWatchButton url={show.playlistURL} />
+        <div>
+          <h3>{show.name}</h3>
+          <p>{show.description}</p>
+        </div>
+        <div className="showOnHover">
+          <YoutubeWatchButton url={show.playlistURL} />
+        </div>
       </section>
     </>
   );

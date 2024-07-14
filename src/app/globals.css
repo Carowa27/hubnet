@@ -25,7 +25,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
+.card .showOnHover {
+  display: none;
+}
+.card:hover .showOnHover {
+  display: block;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
