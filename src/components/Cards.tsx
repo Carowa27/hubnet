@@ -15,11 +15,13 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          border: "green 2px solid",
           padding: "10px",
           borderRadius: "10px",
           width: "353px",
           height: "308px",
+          backgroundImage: `url(${show.backgroundImg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <div
