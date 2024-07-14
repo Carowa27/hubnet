@@ -37,9 +37,9 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           >
             <div className="show-on-hover" style={{ gridColumn: "1" }}>
               <h4 style={{ margin: 0, marginBottom: "5px" }}>PRODUCER</h4>
-              <h5 style={{ margin: 0, marginBottom: "5px" }}>
+              <h4 style={{ margin: 0, marginBottom: "5px" }}>
                 {show.producer.name}
-              </h5>
+              </h4>
               <p style={{ margin: 0 }}>Read more &gt;</p>
             </div>
             <div style={{ gridColumn: "3", textAlign: "right" }}>
