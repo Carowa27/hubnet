@@ -33,9 +33,9 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
           }}
         >
           <div className="showOnHover" style={{ gridColumn: "1" }}>
-            <h4>Producer</h4>
+            <h4>PRODUCER</h4>
             <h5>{show.producer.name}</h5>
-            <p>Read more</p>
+            <p>Read more &gt;</p>
           </div>
           <div style={{ gridColumn: "3", textAlign: "right" }}>
             <img

@@ -12,9 +12,19 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
           borderRadius: "10px",
         }}
       >
-        <a href={url}>
-          <span>"[]"</span>
-          <span>WATCH ON YOUTUBE</span>
+        <a href={url} style={{ color: "#ffffff" }}>
+          <p
+            style={{
+              margin: "0",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <span>
+              {`[`} &gt; {`] `}
+            </span>
+            <span style={{ margin: "auto" }}> WATCH ON YOUTUBE</span>
+          </p>
         </a>
       </section>
     </>
