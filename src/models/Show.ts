@@ -7,6 +7,6 @@ export class Show {
     public producer: Producer,
     public description: string,
     public backgroundImg: string,
-    public channelURL: string
+    public playlistURL: string
   ) {}
 }
