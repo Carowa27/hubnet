@@ -11,7 +11,7 @@ interface ShowCardParams {
 export const ShowCard = ({ show, homePage }: ShowCardParams) => {
   return (
     <>
-      <section
+      <article
         className="card"
         style={{
           display: "flex",
@@ -27,7 +27,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
         }}
       >
         {homePage && (
-          <div
+          <section
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3,1fr)",
@@ -47,18 +47,18 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
                 alt={`${show.name} logo`}
               />
             </div>
-          </div>
+          </section>
         )}
-        <div>
+        <section>
           <h3>{show.name}</h3>
           <p className={`${homePage ? "" : "show-on-hover"}`}>
             {show.description}
           </p>
-        </div>
-        <div className="show-on-hover">
+        </section>
+        <section className="show-on-hover">
           <YoutubeWatchButton url={show.playlistURL} />
-        </div>
-      </section>
+        </section>
+      </article>
     </>
   );
 };
