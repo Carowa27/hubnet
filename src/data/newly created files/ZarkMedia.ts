@@ -15,8 +15,8 @@ export const ZarkMedia = {
       URL: "https://www.patreon.com/zarkmedia",
     },
   ],
-  cutout: hubwireGalacticCharacter,
-  logo: logo,
+  cutout: hubwireGalacticCharacter.src,
+  logo: logo.src,
 };
 
 /*-- SHOWS --*/
@@ -26,7 +26,7 @@ export const HubwireGalactic = {
   producer: ZarkMedia,
   description:
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  backgroundImg: tempBackground,
+  backgroundImg: tempBackground.src,
   playlistURL:
     "https://www.youtube.com/playlist?list=PLxwkX_IXK1UYmGVTSjuMIPnJX8p9vBcqW",
 };
