@@ -1,12 +1,14 @@
 import { YoutubeWatchButton } from "./Buttons";
 import logo from "../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
+import { usePathname } from "next/navigation";
 
-interface SOFCardParams {
+interface ShowCardParams {
   show: Show;
+  homePage: boolean;
 }
 
-export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
+export const ShowCard = ({ show, homePage }: ShowCardParams) => {
   return (
     <>
       <section
@@ -14,8 +16,8 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "10px",
+          justifyContent: `${homePage ? "space-between" : "end"}`,
+          padding: "10px 15px",
           borderRadius: "10px",
           width: "353px",
           height: "308px",
@@ -24,30 +26,34 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
           backgroundSize: "cover",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-            gap: "10px",
-            gridAutoRows: "minmax(100px, auto)",
-          }}
-        >
-          <div className="show-on-hover" style={{ gridColumn: "1" }}>
-            <h4>PRODUCER</h4>
-            <h5>{show.producer.name}</h5>
-            <p>Read more &gt;</p>
+        {homePage && (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3,1fr)",
+              gap: "10px",
+              gridAutoRows: "minmax(100px, auto)",
+            }}
+          >
+            <div className="show-on-hover" style={{ gridColumn: "1" }}>
+              <h4>PRODUCER</h4>
+              <h5>{show.producer.name}</h5>
+              <p>Read more &gt;</p>
+            </div>
+            <div style={{ gridColumn: "3", textAlign: "right" }}>
+              <img
+                style={{ aspectRatio: "1/1", width: "40px" }}
+                src={logo.src}
+                alt={`${show.name} logo`}
+              />
+            </div>
           </div>
-          <div style={{ gridColumn: "3", textAlign: "right" }}>
-            <img
-              style={{ aspectRatio: "1/1", width: "40px" }}
-              src={logo.src}
-              alt={`${show.name} logo`}
-            />
-          </div>
-        </div>
+        )}
         <div>
           <h3>{show.name}</h3>
-          <p>{show.description}</p>
+          <p className={`${homePage ? "" : "show-on-hover"}`}>
+            {show.description}
+          </p>
         </div>
         <div className="show-on-hover">
           <YoutubeWatchButton url={show.playlistURL} />
