@@ -5,11 +5,14 @@ interface YTBParam {
 export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
-      <section
+      <button
+        // className="remove-corner"
         style={{
-          border: "LightGray 1px solid",
+          border: "LightGray 2px solid",
+          background: "none",
           padding: "10px",
           borderRadius: "10px",
+          width: "100%",
         }}
       >
         <a href={url} style={{ color: "#ffffff" }}>
@@ -26,7 +29,7 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
             <span style={{ margin: "auto" }}> WATCH ON YOUTUBE</span>
           </p>
         </a>
-      </section>
+      </button>
     </>
   );
 };

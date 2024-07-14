@@ -32,7 +32,7 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
             gridAutoRows: "minmax(100px, auto)",
           }}
         >
-          <div className="showOnHover" style={{ gridColumn: "1" }}>
+          <div className="show-on-hover" style={{ gridColumn: "1" }}>
             <h4>PRODUCER</h4>
             <h5>{show.producer.name}</h5>
             <p>Read more &gt;</p>
@@ -49,7 +49,7 @@ export const ShowsOnFrontPageCard = ({ show }: SOFCardParams) => {
           <h3>{show.name}</h3>
           <p>{show.description}</p>
         </div>
-        <div className="showOnHover">
+        <div className="show-on-hover">
           <YoutubeWatchButton url={show.playlistURL} />
         </div>
       </section>

@@ -25,10 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-.card .showOnHover {
+.card .show-on-hover {
   display: none;
 }
-.card:hover .showOnHover {
+.card:hover .show-on-hover {
   display: block;
 }
 .card:hover {
@@ -40,4 +40,28 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.remove-corner {
+  mask-image: none,
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 24 24"%3E%3Cpath d="M0 0h4.7a8 8 0 015.6 2.3l11.4 11.4a8 8 0 012.3 5.6V24H0V0z" fill="%23000"/%3E%3C/svg%3E'),
+    none, none, linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000);
+  mask-size: 0px 0px, 25px 25px, 0px 0px, 0px 0px, calc(100% - 23px) 1px,
+    1px calc(100% + 2px), calc(100% - 23px) calc(100% + 2px),
+    26px calc(100% - 23px), calc(100% + 2px) 1px;
+  mask-position: left top, right top, right bottom, left bottom, -1px top,
+    left -1px, -1px -1px, right 24px, -1px bottom;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: none,
+    url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 24 24"%3E%3Cpath d="M0 0h4.7a8 8 0 015.6 2.3l11.4 11.4a8 8 0 012.3 5.6V24H0V0z" fill="%23000"/%3E%3C/svg%3E'),
+    none, none, linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000), linear-gradient(#000, #000),
+    linear-gradient(#000, #000);
+  -webkit-mask-size: 0px 0px, 25px 25px, 0px 0px, 0px 0px, calc(100% - 23px) 1px,
+    1px calc(100% + 2px), calc(100% - 23px) calc(100% + 2px),
+    26px calc(100% - 23px), calc(100% + 2px) 1px;
+  -webkit-mask-position: left top, right top, right bottom, left bottom,
+    -1px top, left -1px, -1px -1px, right 24px, -1px bottom;
+  -webkit-mask-repeat: no-repeat;
 }
