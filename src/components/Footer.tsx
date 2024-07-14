@@ -1,5 +1,5 @@
 import madeByCommunity from "../../public/assets/made-by-community-logo.png";
-import hubnetLogo from "../../public/assets/hubnet-white-logo.png";
+import hubnetLogo from "../../public/assets/hubnet-white.png";
 import starCitizenLogo from "../../public/assets/starcitizen-logo.png";
 import discordLogo from "../../public/assets/discord-logo.png";
 
