@@ -20,7 +20,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           padding: "10px 15px",
           borderRadius: "10px",
           width: "353px",
-          height: "308px",
+          height: "285px",
           backgroundImage: `url(${show.backgroundImg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -32,13 +32,15 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
               display: "grid",
               gridTemplateColumns: "repeat(3,1fr)",
               gap: "10px",
-              gridAutoRows: "minmax(100px, auto)",
+              gridAutoRows: "minmax(10px, auto)",
             }}
           >
             <div className="show-on-hover" style={{ gridColumn: "1" }}>
-              <h4>PRODUCER</h4>
-              <h5>{show.producer.name}</h5>
-              <p>Read more &gt;</p>
+              <h4 style={{ margin: 0, marginBottom: "5px" }}>PRODUCER</h4>
+              <h5 style={{ margin: 0, marginBottom: "5px" }}>
+                {show.producer.name}
+              </h5>
+              <p style={{ margin: 0 }}>Read more &gt;</p>
             </div>
             <div style={{ gridColumn: "3", textAlign: "right" }}>
               <img
@@ -50,13 +52,16 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           </section>
         )}
         <section>
-          <h3>{show.name}</h3>
-          <p className={`${homePage ? "" : "show-on-hover"}`}>
+          <h3 style={{ margin: 0, marginBottom: "5px" }}>{show.name}</h3>
+          <p
+            style={{ margin: 0 }}
+            className={`${homePage ? "" : "show-on-hover"}`}
+          >
             {show.description}
           </p>
-        </section>
-        <section className="show-on-hover">
-          <YoutubeWatchButton url={show.playlistURL} />
+          <section style={{ marginTop: "20px" }} className="show-on-hover">
+            <YoutubeWatchButton url={show.playlistURL} />
+          </section>
         </section>
       </article>
     </>

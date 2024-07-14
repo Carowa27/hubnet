@@ -3,7 +3,7 @@ import { AvaIRL } from "./AvaIRL";
 import { ChroniclesofStanton } from "./ChroniclesofStanton";
 import { Emergence } from "./Emergence";
 import { Guidance } from "./Guidance";
-import { HubwireGalactic } from "./HubwireGalactic";
+import { HubwireGalactic } from "./newly created files/ZarkMedia";
 import { JACKofSpades } from "./JACKofSpades";
 import { OnTrack } from "./OnTrack";
 import { OVERCLOCKED } from "./OVERCLOCKED";
@@ -13,16 +13,13 @@ import { TheSpin } from "./TheSpin";
 import { TheVerseView } from "./TheVerseView";
 
 export const Shows: Show[] = [
-    AvaIRL,
-    ChroniclesofStanton,
-    Emergence,
-    Guidance,
-    HubwireGalactic,
-    JACKofSpades,
-    OnTrack,
-    OVERCLOCKED,
-    PiracyandtheIndustrialWorker,
-    RedLine,
-    TheSpin,
-    TheVerseView
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
+  HubwireGalactic,
 ];
