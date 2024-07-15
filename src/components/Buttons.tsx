@@ -64,8 +64,11 @@ export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
           color: `${start === 0 ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"}`,
         }}
         onClick={() => arrowFunction()}
-      >
-        &#706;
+        >
+          {/* TODO: look up on mozilla,chrome & edge */}
+          <p style={{
+          fontSize:"36px",margin:0, display:"flex",alignItems:"center", justifyContent:"center"}}>
+        &#706;</p>
       </button>
     </>
   );
@@ -95,7 +98,10 @@ export const ArrowRightButton = ({
         }}
         onClick={() => arrowFunction()}
       >
-        &#707;
+          {/* TODO: look up on mozilla,chrome & edge */}
+        <p style={{
+        fontSize:"36px",margin:0, display:"flex",alignItems:"center", justifyContent:"center"}}>
+        &#707;</p>
       </button>
     </>
   );
