@@ -1,5 +1,5 @@
-import { YoutubeWatchButton } from "./Buttons";
-import logo from "../../public/assets/made-by-community-logo.png";
+import { YoutubeWatchButton } from "../Buttons/YoutubeWatchButton";
+import logo from "../../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
 
 interface ShowCardParams {

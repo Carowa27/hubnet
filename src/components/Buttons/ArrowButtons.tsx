@@ -1,6 +1,3 @@
-interface YTBParam {
-  url: string;
-}
 interface ArrowLParams {
   arrowFunction: () => void;
   start: number;
@@ -10,41 +7,6 @@ interface ArrowRParams {
   end: number;
   lastIndex: number;
 }
-interface DotParams {
-  dotFunction: (i: number) => void;
-  i: number;
-}
-export const YoutubeWatchButton = ({ url }: YTBParam) => {
-  return (
-    <>
-      <button
-        // className="remove-corner"
-        style={{
-          border: "LightGray 2px solid",
-          background: "none",
-          padding: "10px",
-          borderRadius: "10px",
-          width: "100%",
-        }}
-      >
-        <a href={url} style={{ color: "#ffffff" }}>
-          <p
-            style={{
-              margin: "0",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <span>
-              {`[`} &gt; {`] `}
-            </span>
-            <span style={{ margin: "auto" }}> WATCH ON YOUTUBE</span>
-          </p>
-        </a>
-      </button>
-    </>
-  );
-};
 
 export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
   return (
@@ -121,25 +83,6 @@ export const ArrowRightButton = ({
           &#707;
         </p>
       </button>
-    </>
-  );
-};
-
-export const FilledDot = ({ dotFunction, i }: DotParams) => {
-  return (
-    <>
-      <span style={{ padding: "2px" }} onClick={() => dotFunction(i)}>
-        &#11044;
-      </span>
-    </>
-  );
-};
-export const Dot = ({ dotFunction, i }: DotParams) => {
-  return (
-    <>
-      <span style={{ padding: "2px" }} onClick={() => dotFunction(i)}>
-        &#9711;
-      </span>
     </>
   );
 };

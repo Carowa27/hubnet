@@ -1,7 +1,4 @@
-import { ShowCard } from "@/components/Cards";
-import Image from "next/image";
-import { HubwireGalactic } from "@/data/newly created files/ZarkMedia";
-import { ProdLogoCarousel, ShowCarousel } from "@/components/Carousels";
+import { ShowCarousel } from "@/components/Carousels/ShowCarousel";
 
 export default function Home() {
   return (
