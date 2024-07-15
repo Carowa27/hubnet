@@ -63,7 +63,7 @@ export const ShowCarousel = ({ homePage }: ShowCarouselParams) => {
         >
           {Shows.map((show, i) => {
             if (i >= start && i <= end) {
-              return <ShowCard show={show} homePage={homePage} />;
+              return <ShowCard key={i} show={show} homePage={homePage} />;
             } else return;
           })}
         </div>
