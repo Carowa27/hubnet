@@ -31,13 +31,14 @@ export const ShowCarousel = ({ homePage }: ShowCarouselParams) => {
 
   const totalDots = Math.ceil(Shows.length / 3);
   return (
-    <>
+    <div style={{display:"flex",justifyContent:"center"}}>
       <section
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(9,1fr)",
           gap: "10px",
           gridAutoRows: "minmax(10px, auto)",
+          width:"75%",
         }}
       >
         <div
@@ -100,6 +101,6 @@ export const ShowCarousel = ({ homePage }: ShowCarouselParams) => {
           })}
         </div>
       </section>
-    </>
+    </div>
   );
 };
