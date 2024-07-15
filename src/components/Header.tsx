@@ -1,7 +1,11 @@
+"use client";
 import hubnetLogo from "../../public/assets/hubnet-white.png";
 import { DiscordAndProdMenu, DiscordOnlyMenu } from "./Menus";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathName = usePathname();
+
   return (
     <header
       style={{
@@ -23,8 +27,7 @@ export const Header = () => {
           alignItems: "center",
         }}
       >
-        <DiscordOnlyMenu />
-        <DiscordAndProdMenu />
+        {pathName === "/" ? <DiscordAndProdMenu /> : <DiscordOnlyMenu />}
       </section>
     </header>
   );
