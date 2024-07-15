@@ -61,7 +61,7 @@ export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
           }`,
           border: "none",
           borderRadius: "10px",
-          color: `${start === 0 ? "rgba(255,255,255,0.3" : "rgb(255,255,255)"}`,
+          color: `${start === 0 ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"}`,
         }}
         onClick={() => arrowFunction()}
       >
@@ -90,7 +90,7 @@ export const ArrowRightButton = ({
           border: "none",
           borderRadius: "10px",
           color: `${
-            end === lastIndex ? "rgba(255,255,255,0.3" : "rgb(255,255,255)"
+            end === lastIndex ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"
           }`,
         }}
         onClick={() => arrowFunction()}
