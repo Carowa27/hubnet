@@ -19,7 +19,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           padding: "10px 15px",
           borderRadius: "10px",
           width: "auto",
-          maxWidth:"350px",
+          maxWidth: "350px",
           height: "250px",
           backgroundImage: `url(${show.backgroundImg})`,
           backgroundRepeat: "no-repeat",
@@ -62,12 +62,12 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
         <section>
           <h3 style={{ margin: 0, marginBottom: "5px" }}>{show.name}</h3>
           <p
-            style={{ margin: 0, paddingBottom:"10px" }}
+            style={{ margin: 0, paddingBottom: "10px" }}
             className={`${homePage ? "" : "show-on-hover"}`}
           >
             {show.description}
           </p>
-          <section style={{ marginTop: "10px" }} className="show-on-hover"> 
+          <section style={{ marginTop: "10px" }} className="show-on-hover">
             <YoutubeWatchButton url={show.playlistURL} />
           </section>
         </section>

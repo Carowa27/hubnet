@@ -61,14 +61,24 @@ export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
           }`,
           border: "none",
           borderRadius: "10px",
-          color: `${start === 0 ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"}`,
+          color: `${
+            start === 0 ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"
+          }`,
         }}
         onClick={() => arrowFunction()}
+      >
+        {/* TODO: look up on mozilla,chrome & edge */}
+        <p
+          style={{
+            fontSize: "36px",
+            margin: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          {/* TODO: look up on mozilla,chrome & edge */}
-          <p style={{
-          fontSize:"36px",margin:0, display:"flex",alignItems:"center", justifyContent:"center"}}>
-        &#706;</p>
+          &#706;
+        </p>
       </button>
     </>
   );
@@ -98,10 +108,18 @@ export const ArrowRightButton = ({
         }}
         onClick={() => arrowFunction()}
       >
-          {/* TODO: look up on mozilla,chrome & edge */}
-        <p style={{
-        fontSize:"36px",margin:0, display:"flex",alignItems:"center", justifyContent:"center"}}>
-        &#707;</p>
+        {/* TODO: look up on mozilla,chrome & edge */}
+        <p
+          style={{
+            fontSize: "36px",
+            margin: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          &#707;
+        </p>
       </button>
     </>
   );
@@ -125,5 +143,3 @@ export const Dot = ({ dotFunction, i }: DotParams) => {
     </>
   );
 };
-
-
