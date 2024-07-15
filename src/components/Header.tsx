@@ -1,5 +1,5 @@
 import hubnetLogo from "../../public/assets/hubnet-white.png";
-import discordLogo from "../../public/assets/discord-logo.png";
+import { DiscordAndProdMenu, DiscordOnlyMenu } from "./Menus";
 
 export const Header = () => {
   return (
@@ -14,7 +14,7 @@ export const Header = () => {
         <img
           src={hubnetLogo.src}
           alt="Hubnet Logo"
-          style={{ height: "40px" }}
+          style={{ height: "60px" }}
         />
       </section>
       <section
@@ -23,12 +23,8 @@ export const Header = () => {
           alignItems: "center",
         }}
       >
-        <span>PRODUCERS</span>
-        <img
-          src={discordLogo.src}
-          alt="Discord Logo"
-          style={{ height: "40px" }}
-        />
+        <DiscordOnlyMenu />
+        <DiscordAndProdMenu />
       </section>
     </header>
   );

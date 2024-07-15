@@ -1,7 +1,6 @@
 import { YoutubeWatchButton } from "./Buttons";
 import logo from "../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
-import { usePathname } from "next/navigation";
 
 interface ShowCardParams {
   show: Show;
