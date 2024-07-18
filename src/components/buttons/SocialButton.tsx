@@ -7,8 +7,13 @@ interface SocialParams {
 }
 
 export const SocialButton = ({ socialType, url }: SocialParams) => {
-  const Discord = discordlogo.src;
-  console.log("img link", Discord, socialType);
+  const logo = (socialType: Socials) => {
+    switch (socialType) {
+      case "Discord":
+        return discordlogo.src;
+    }
+  };
+  console.log("img link", logo, socialType);
   return (
     <>
       <button
@@ -24,7 +29,7 @@ export const SocialButton = ({ socialType, url }: SocialParams) => {
       >
         <a href={url} className="link-default" style={{ height: "20px" }}>
           <img
-            src={Discord}
+            src={logo(socialType)}
             alt={`${socialType} logo`}
             style={{ height: "20px", width: "auto" }}
           />
