@@ -2,22 +2,22 @@ export const ConnectOnDiscordButton = () => {
   return (
     <>
       <button
-        // className="remove-corner"
+        className="button-connect"
         style={{
-          border: "LightGray 2px solid",
-          background: "none",
           padding: "10px",
+          width: "auto",
+          border: "none",
           borderRadius: "10px",
-          width: "35%",
         }}
       >
         <p
           style={{
             margin: "0",
-            color: "lightGray",
+            paddingLeft: "20px",
+            paddingRight: "20px",
           }}
         >
-          <span style={{ margin: "auto" }}>CONNECT ON DISCORD</span>
+          Connect on discord
         </p>
       </button>
     </>
