@@ -1,8 +1,8 @@
-interface YTBParam {
+interface Params {
   url: string;
 }
 
-export const WatchIntroductionButton = ({ url }: YTBParam) => {
+export const WatchIntroductionButton = ({ url }: Params) => {
   return (
     <>
       <button
