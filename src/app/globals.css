@@ -6,31 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-  /* shades */
-  --background: #0e1015;
-  --primary: #474e67;
-  --background-component-producer-top: #2b2f3e;
-  --border-producer-not-focused-header: #4d628c;
-  /* tints */
-  --paragraph-color: #b5b8c2;
-  --paragraph-footer: #9195a4;
-  --button-white-background: #d6e1f7;
-  --white: #ffffff;
-  /* gradients */
-  --background-footer-and-header: linear-gradient(to right, #1c1f29, #323748);
-  --background-card-home: linear-gradient(to bottom, #2b2f3e, #242734);
-  --background-button: linear-gradient(to bottom, #474e67, #2b2f3e);
-  --background-component-producer-bottom: linear-gradient(
-    to bottom,
-    #1c1f29,
-    #07080a
-  );
-  /* overlay fades */
-  --overlay-card-fade-default: linear-gradient(to bottom, #2b2f3e00, #2b2f3e);
-  --overlay-card-fade-hover: linear-gradient(to bottom, #2b2f3ecc, #2b2f3e);
-  /* other */
-  --dark-blue-50-opacity: #090b1150;
 }
 
 @media (prefers-color-scheme: dark) {
