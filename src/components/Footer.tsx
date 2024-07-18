@@ -1,6 +1,6 @@
 import madeByCommunity from "../../public/assets/made-by-community-logo.png";
 import hubnetLogo from "../../public/assets/hubnet-white.png";
-import starCitizenLogo from "../../public/assets/starcitizen-logo.png";
+import starCitizenLogo from "../../public/assets/STARCITIZEN_WHITE.webp";
 import discordLogo from "../../public/assets/discord-logo.png";
 
 export const Footer = () => {
@@ -51,7 +51,7 @@ export const Footer = () => {
         <img
           src={starCitizenLogo.src}
           alt="Star Citizen Logo"
-          style={{ aspectRatio: "1/1", height: "150px" }}
+          style={{ height: "150px" }}
         />
       </section>
     </footer>
