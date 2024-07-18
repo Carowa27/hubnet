@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import StyledComponentsRegistry from "@/libs/registry";
 
 export const metadata: Metadata = {
   title: "Hubnet",
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <StyledComponentsRegistry>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
