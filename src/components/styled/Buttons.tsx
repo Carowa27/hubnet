@@ -10,6 +10,7 @@ const Button = styled.button.attrs<{}>(() => ({}))`
   padding: 10px;
   width: auto;
   border-radius: 10px;
+  border: none;
   font-size: 16px;
   text-transform: uppercase;
 
@@ -28,7 +29,6 @@ export const ButtonSecondary = styled(Button).attrs<{}>(() => ({}))`
 export const ButtonArrow = styled(Button).attrs<{}>(() => ({}))`
   color: ${color.white};
   background: ${color.backgroundButton};
-  border: none;
   aspect-ratio: 1/1;
   height: 48px;
   padding: 0;
@@ -37,6 +37,17 @@ export const ButtonArrow = styled(Button).attrs<{}>(() => ({}))`
     background: ${color.buttonWhiteBackground};
     cursor: not-allowed;
   }
+`;
+export const ButtonSocial = styled(Button).attrs<{}>(() => ({}))`
+  color: ${color.white};
+  background: ${color.primary};
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 `;
 
 // EXEMPEL

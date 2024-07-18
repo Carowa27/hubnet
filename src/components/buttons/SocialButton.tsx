@@ -1,5 +1,7 @@
 import { Socials } from "@/models/Producer";
 import discordlogo from "../../../public/assets/discord-logo.png";
+import { ButtonSocial } from "../styled/Buttons";
+import { LinkDefault } from "../styled/Texts";
 
 interface SocialParams {
   socialType: Socials;
@@ -7,34 +9,24 @@ interface SocialParams {
 }
 
 export const SocialButton = ({ socialType, url }: SocialParams) => {
+  //  TODO add more cases and a default
   const logo = (socialType: Socials) => {
     switch (socialType) {
       case "Discord":
         return discordlogo.src;
     }
   };
-  console.log("img link", logo, socialType);
   return (
     <>
-      <button
-        className="button-social"
-        style={{
-          borderRadius: "50%",
-          height: "48px",
-          width: "48px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <a href={url} className="link-default" style={{ height: "20px" }}>
+      <ButtonSocial>
+        <LinkDefault href={url} style={{ height: "20px" }}>
           <img
             src={logo(socialType)}
             alt={`${socialType} logo`}
             style={{ height: "20px", width: "auto" }}
           />
-        </a>
-      </button>
+        </LinkDefault>
+      </ButtonSocial>
     </>
   );
 };
