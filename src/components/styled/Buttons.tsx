@@ -21,10 +21,18 @@ const Button = styled.button.attrs<{}>(() => ({}))`
 
 // När man har en komponent man vill forsätta bygga på anger man den efter "styled" inom paranteserna
 
-export const ButtonSecondary = styled(Button).attrs<{}>(() => ({}))`
-  color: ${color.white};
-  border: 1px solid ${color.buttonWhiteBackground};
-  background: ${color.darkBlue50Opacity};
+export const ButtonSecondary = styled(Button).attrs<{
+  $bgcolor: string;
+  $color: string;
+  $border: string;
+}>((props) => ({
+  $bgcolor: props.$bgcolor,
+  $color: props.$color,
+  $border: props.$border,
+}))`
+  background: ${(props) => props.$bgcolor};
+  color: ${(props) => props.$color};
+  border: ${(props) => props.$border};
 `;
 export const ButtonArrow = styled(Button).attrs<{}>(() => ({}))`
   color: ${color.white};
@@ -49,18 +57,7 @@ export const ButtonSocial = styled(Button).attrs<{}>(() => ({}))`
   justify-content: center;
   padding: 0;
 `;
-export const ButtonJoinUs = styled(Button).attrs<{}>(() => ({}))`
-  color: ${color.white};
-  background: ${color.background};
-  border: 1px solid ${color.buttonWhiteBackground};
-  padding: "10px";
-  width: "auto";
-  borderradius: "10px";
-`;
-export const ButtonConnect = styled(Button).attrs<{}>(() => ({}))`
-  color: ${color.background};
-  background: ${color.buttonWhiteBackground};
-`;
+
 // EXEMPEL
 // Om man vill kunna skicka in en prop som ändrar styling
 

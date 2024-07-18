@@ -1,11 +1,16 @@
+import { color } from "@/utils/colors";
 import discordLogo from "../../../public/assets/discord-logo.png";
-import { ButtonJoinUs } from "../styled/Buttons";
+import { ButtonSecondary } from "../styled/Buttons";
 import { LinkDefault, Paragraph } from "../styled/Texts";
 
-export const JoinUsButton = () => {
+export const JoinButton = () => {
   return (
     <>
-      <ButtonJoinUs>
+      <ButtonSecondary
+        $bgcolor={color.background}
+        $border={`1px solid ${color.buttonWhiteBackground}`}
+        $color={color.white}
+      >
         <LinkDefault href="">
           <Paragraph
             style={{
@@ -24,7 +29,7 @@ export const JoinUsButton = () => {
             </span>
           </Paragraph>
         </LinkDefault>
-      </ButtonJoinUs>
+      </ButtonSecondary>
     </>
   );
 };

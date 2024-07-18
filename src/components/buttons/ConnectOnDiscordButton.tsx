@@ -1,10 +1,15 @@
-import { ButtonConnect } from "../styled/Buttons";
+import { color } from "@/utils/colors";
+import { ButtonSecondary } from "../styled/Buttons";
 import { Paragraph } from "../styled/Texts";
 
 export const ConnectOnDiscordButton = () => {
   return (
     <>
-      <ButtonConnect>
+      <ButtonSecondary
+        $bgcolor={color.buttonWhiteBackground}
+        $border="none"
+        $color={color.background}
+      >
         <Paragraph
           style={{
             margin: "0",
@@ -14,7 +19,7 @@ export const ConnectOnDiscordButton = () => {
         >
           Connect on discord
         </Paragraph>
-      </ButtonConnect>
+      </ButtonSecondary>
     </>
   );
 };
