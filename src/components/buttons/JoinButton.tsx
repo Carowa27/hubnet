@@ -1,18 +1,13 @@
 import discordLogo from "../../../public/assets/discord-logo.png";
+import { ButtonJoinUs } from "../styled/Buttons";
+import { LinkDefault, Paragraph } from "../styled/Texts";
 
 export const JoinUsButton = () => {
   return (
     <>
-      <button
-        className="button-join-us"
-        style={{
-          padding: "10px",
-          width: "auto",
-          borderRadius: "10px",
-        }}
-      >
-        <a href="" className="link-default">
-          <p
+      <ButtonJoinUs>
+        <LinkDefault href="">
+          <Paragraph
             style={{
               margin: "0",
               display: "flex",
@@ -27,9 +22,9 @@ export const JoinUsButton = () => {
             <span style={{ paddingLeft: "10px", paddingRight: "10px" }}>
               Join us now
             </span>
-          </p>
-        </a>
-      </button>
+          </Paragraph>
+        </LinkDefault>
+      </ButtonJoinUs>
     </>
   );
 };

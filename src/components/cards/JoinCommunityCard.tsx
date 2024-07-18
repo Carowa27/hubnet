@@ -1,4 +1,4 @@
-import { JoinUsButton } from "../buttons/JoinUsButton";
+import { JoinUsButton } from "../buttons/JoinButton";
 
 export const JoinCommunityCard = () => {
   return (

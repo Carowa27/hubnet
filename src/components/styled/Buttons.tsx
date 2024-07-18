@@ -49,7 +49,14 @@ export const ButtonSocial = styled(Button).attrs<{}>(() => ({}))`
   justify-content: center;
   padding: 0;
 `;
-
+export const ButtonJoinUs = styled(Button).attrs<{}>(() => ({}))`
+  color: ${color.white};
+  background: ${color.background};
+  border: 1px solid ${color.buttonWhiteBackground};
+  padding: "10px";
+  width: "auto";
+  borderradius: "10px";
+`;
 // EXEMPEL
 // Om man vill kunna skicka in en prop som ändrar styling
 
