@@ -40,28 +40,6 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-.hero-inspo-text {
-  font-size: 32px;
-  text-transform: uppercase;
-}
-.paragraph-show-card {
-  font-size: 14px;
-}
-h1 {
-  font-size: 36px;
-  text-transform: uppercase;
-}
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-}
-h3 {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-p {
-  font-size: 16px;
-}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -81,38 +59,6 @@ body {
   -webkit-box-shadow: 0px 4px 4px 0px #000000;
   -moz-box-shadow: 0px 4px 4px 0px #000000;
   box-shadow: 0px 4px 4px 0px #000000;
-}
-button {
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.button-arrow {
-  background: var(--background-button);
-  color: var(--white);
-}
-.button-watch {
-  background: var(--dark-blue-50-opacity);
-  color: var(--white);
-  border: 1px solid var(--button-white-background);
-}
-.button-join-us {
-  background: var(--background);
-  color: var(--white);
-  border: 1px solid var(--button-white-background);
-}
-.button-social {
-  background: var(--primary);
-  color: var(--white);
-  border: none;
-}
-.button-connect {
-  background: var(--button-white-background);
-  color: var(--background);
-}
-.link-default {
-  font-size: 16px;
-  color: var(--white);
-  text-decoration: none;
 }
 @layer utilities {
   .text-balance {
