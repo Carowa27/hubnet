@@ -1,7 +1,4 @@
-import { YoutubeWatchButton } from "../Buttons/YoutubeWatchButton";
-import logo from "../../../public/assets/made-by-community-logo.png";
-import { Show } from "@/models/Show";
-import { WatchIntroductionButton } from "../Buttons/WatchIntroductionButton";
+import { JoinUsButton } from "../Buttons/JoinUsButton";
 
 export const JoinCommunityCard = () => {
   return (
@@ -37,7 +34,7 @@ export const JoinCommunityCard = () => {
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <WatchIntroductionButton url={""} />
+          <JoinUsButton />
         </section>
       </article>
     </>
