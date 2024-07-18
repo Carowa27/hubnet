@@ -25,6 +25,19 @@ export const ButtonSecondary = styled(Button).attrs<{}>(() => ({}))`
   border: 1px solid ${color.buttonWhiteBackground};
   background: ${color.darkBlue50Opacity};
 `;
+export const ButtonArrow = styled(Button).attrs<{}>(() => ({}))`
+  color: ${color.white};
+  background: ${color.backgroundButton};
+  border: none;
+  aspect-ratio: 1/1;
+  height: 48px;
+  padding: 0;
+
+  &:disabled {
+    background: ${color.buttonWhiteBackground};
+    cursor: not-allowed;
+  }
+`;
 
 // EXEMPEL
 // Om man vill kunna skicka in en prop som ändrar styling
