@@ -5,11 +5,11 @@ import { ArrowLeftButton, ArrowRightButton } from "../buttons/ArrowButtons";
 import { ShowCard } from "../cards/ShowCard";
 import { Shows } from "@/data/Shows";
 
-interface ShowCarouselParams {
+interface ShowsCarouselParams {
   homePage: boolean;
 }
 
-export const ShowCarousel = ({ homePage }: ShowCarouselParams) => {
+export const ShowsCarousel = ({ homePage }: ShowsCarouselParams) => {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(2);
   const arrowLFunction = () => {
