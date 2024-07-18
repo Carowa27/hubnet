@@ -6,27 +6,25 @@ export const WatchIntroductionButton = ({ url }: YTBParam) => {
   return (
     <>
       <button
-        // className="remove-corner"
+        className="button-intro"
         style={{
-          border: "LightGray 2px solid",
-          background: "none",
           padding: "10px",
+          width: "auto",
           borderRadius: "10px",
-          width: "100%",
         }}
       >
-        <a href={url} style={{ color: "#ffffff" }}>
+        <a href={url} style={{ color: "#ffffff" }} className="link-default">
           <p
             style={{
               margin: "0",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <span>
               {`[`} &gt; {`] `}
             </span>
-            <span style={{ margin: "auto" }}> WATCH INTRODUCTION</span>
+            <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+              Watch introduction
+            </span>
           </p>
         </a>
       </button>

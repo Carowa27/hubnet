@@ -6,27 +6,25 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
       <button
-        // className="remove-corner"
+        className="button-watch"
         style={{
-          border: "LightGray 2px solid",
-          background: "none",
           padding: "10px",
+          width: "auto",
           borderRadius: "10px",
-          width: "100%",
         }}
       >
-        <a href={url} style={{ color: "#ffffff" }}>
+        <a href={url} className="link-default">
           <p
             style={{
               margin: "0",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <span>
               {`[`} &gt; {`] `}
             </span>
-            <span style={{ margin: "auto" }}> WATCH ON YOUTUBE</span>
+            <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+              Watch on Youtube
+            </span>
           </p>
         </a>
       </button>
