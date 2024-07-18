@@ -1,3 +1,5 @@
+import { ButtonSecondary } from "../Styled/Buttons";
+
 interface YTBParam {
   url: string;
 }
@@ -5,14 +7,7 @@ interface YTBParam {
 export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
-      <button
-        className="button-watch"
-        style={{
-          padding: "10px",
-          width: "auto",
-          borderRadius: "10px",
-        }}
-      >
+      <ButtonSecondary>
         <a href={url} className="link-default">
           <p
             style={{
@@ -27,7 +22,7 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
             </span>
           </p>
         </a>
-      </button>
+      </ButtonSecondary>
     </>
   );
 };
