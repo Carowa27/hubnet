@@ -1,3 +1,6 @@
+import { ButtonSecondary } from "../styled/Buttons";
+import { LinkDefault, Paragraph } from "../styled/Texts";
+
 interface Params {
   url: string;
 }
@@ -5,16 +8,9 @@ interface Params {
 export const WatchIntroductionButton = ({ url }: Params) => {
   return (
     <>
-      <button
-        className="button-intro"
-        style={{
-          padding: "10px",
-          width: "auto",
-          borderRadius: "10px",
-        }}
-      >
-        <a href={url} style={{ color: "#ffffff" }} className="link-default">
-          <p
+      <ButtonSecondary>
+        <LinkDefault href={url}>
+          <Paragraph
             style={{
               margin: "0",
             }}
@@ -25,9 +21,9 @@ export const WatchIntroductionButton = ({ url }: Params) => {
             <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
               Watch introduction
             </span>
-          </p>
-        </a>
-      </button>
+          </Paragraph>
+        </LinkDefault>
+      </ButtonSecondary>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { ButtonSecondary } from "../styled/Buttons";
+import { LinkDefault, Paragraph } from "../styled/Texts";
 
 interface YTBParam {
   url: string;
@@ -8,8 +9,8 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
       <ButtonSecondary>
-        <a href={url} className="link-default">
-          <p
+        <LinkDefault href={url}>
+          <Paragraph
             style={{
               margin: "0",
             }}
@@ -20,8 +21,8 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
             <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
               Watch on Youtube
             </span>
-          </p>
-        </a>
+          </Paragraph>
+        </LinkDefault>
       </ButtonSecondary>
     </>
   );
