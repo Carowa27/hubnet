@@ -95,6 +95,11 @@ button {
   color: var(--white);
   border: 1px solid var(--button-white-background);
 }
+.button-join-us {
+  background: var(--background);
+  color: var(--white);
+  border: 1px solid var(--button-white-background);
+}
 .button-connect {
   background: var(--button-white-background);
   color: var(--background);
