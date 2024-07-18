@@ -1,16 +1,11 @@
+import { ButtonConnect } from "../styled/Buttons";
+import { Paragraph } from "../styled/Texts";
+
 export const ConnectOnDiscordButton = () => {
   return (
     <>
-      <button
-        className="button-connect"
-        style={{
-          padding: "10px",
-          width: "auto",
-          border: "none",
-          borderRadius: "10px",
-        }}
-      >
-        <p
+      <ButtonConnect>
+        <Paragraph
           style={{
             margin: "0",
             paddingLeft: "20px",
@@ -18,8 +13,8 @@ export const ConnectOnDiscordButton = () => {
           }}
         >
           Connect on discord
-        </p>
-      </button>
+        </Paragraph>
+      </ButtonConnect>
     </>
   );
 };

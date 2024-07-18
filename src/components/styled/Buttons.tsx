@@ -57,6 +57,10 @@ export const ButtonJoinUs = styled(Button).attrs<{}>(() => ({}))`
   width: "auto";
   borderradius: "10px";
 `;
+export const ButtonConnect = styled(Button).attrs<{}>(() => ({}))`
+  color: ${color.background};
+  background: ${color.buttonWhiteBackground};
+`;
 // EXEMPEL
 // Om man vill kunna skicka in en prop som ändrar styling
 
