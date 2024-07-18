@@ -1,4 +1,4 @@
-import { ButtonSecondary } from "../Styled/Buttons";
+import { ButtonSecondary } from "../styled/Buttons";
 
 interface YTBParam {
   url: string;

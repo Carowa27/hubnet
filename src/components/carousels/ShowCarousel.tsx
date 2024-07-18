@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { Dot, FilledDot } from "../Buttons/DotButtons";
-import { ArrowLeftButton, ArrowRightButton } from "../Buttons/ArrowButtons";
-import { ShowCard } from "../Cards/ShowCard";
+import { Dot, FilledDot } from "../buttons/DotButtons";
+import { ArrowLeftButton, ArrowRightButton } from "../buttons/ArrowButtons";
+import { ShowCard } from "../cards/ShowCard";
 import { Shows } from "@/data/Shows";
 
 interface ShowCarouselParams {

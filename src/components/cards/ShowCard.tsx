@@ -1,4 +1,4 @@
-import { YoutubeWatchButton } from "../Buttons/YoutubeWatchButton";
+import { YoutubeWatchButton } from "../buttons/YoutubeWatchButton";
 import logo from "../../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
 

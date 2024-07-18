@@ -1,4 +1,4 @@
-import { ShowCarousel } from "@/components/Carousels/ShowCarousel";
+import { ShowCarousel } from "@/components/carousels/ShowCarousel";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import { ConnectOnDiscordButton } from "../Buttons/ConnectOnDiscordButton";
+import { ConnectOnDiscordButton } from "../buttons/ConnectOnDiscordButton";
 
 export const AboutUsCard = () => {
   return (
