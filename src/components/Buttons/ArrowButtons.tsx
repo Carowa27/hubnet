@@ -12,20 +12,13 @@ export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
   return (
     <>
       <button
+        className="button-arrow"
         disabled={start === 0}
         style={{
           height: "36px",
           aspectRatio: "1/1",
-          background: `${
-            start === 0
-              ? "rgba(63,68,84,0.3)"
-              : "linear-gradient(#2B3452, #191F2E)"
-          }`,
           border: "none",
           borderRadius: "10px",
-          color: `${
-            start === 0 ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"
-          }`,
         }}
         onClick={() => arrowFunction()}
       >
@@ -53,20 +46,14 @@ export const ArrowRightButton = ({
   return (
     <>
       <button
+        className="button-arrow"
         disabled={end === lastIndex}
         style={{
           height: "36px",
           aspectRatio: "1/1",
-          background: `${
-            end === lastIndex
-              ? "rgba(63,68,84,0.3)"
-              : "linear-gradient(#2B3452, #191F2E)"
-          }`,
+
           border: "none",
           borderRadius: "10px",
-          color: `${
-            end === lastIndex ? "rgba(255,255,255,0.3)" : "rgb(255,255,255)"
-          }`,
         }}
         onClick={() => arrowFunction()}
       >
