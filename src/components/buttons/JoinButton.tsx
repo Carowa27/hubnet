@@ -1,5 +1,5 @@
 import { color } from "@/utils/colors";
-import discordLogo from "../../../public/assets/discord-logo.png";
+import discordLogo from "/public/assets/icons/discord.svg";
 import { ButtonSecondary } from "../styled/Buttons";
 import { LinkDefault, Paragraph } from "../styled/Texts";
 

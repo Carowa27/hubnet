@@ -1,7 +1,8 @@
-import madeByCommunity from "../../public/assets/made-by-community-logo.png";
-import hubnetLogo from "../../public/assets/hubnet-white.png";
-import starCitizenLogo from "../../public/assets/STARCITIZEN_WHITE.webp";
-import discordLogo from "../../public/assets/discord-logo.png";
+import madeByCommunity from "/public/assets/made-by-community-logo.png";
+import hubnetLogo from "/public/assets/hubnet-white.png";
+import starCitizenLogo from "/public/assets/STARCITIZEN_WHITE.webp";
+import discordLogo from "/public/assets/icons/discord.svg";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -29,11 +30,19 @@ export const Footer = () => {
             style={{ width: "50px" }}
           />
           <span>PRODUCERS</span>
-          <img
-            src={discordLogo.src}
-            alt="Discord Logo"
-            style={{ width: "50px" }}
-          />
+          <div style={{ width: "2rem", height: "2rem", position: "relative" }}>
+            <Image
+              src={discordLogo}
+              alt="Discord Logo"
+              width={0}
+              height={0}
+              style={{
+                width: "100%",
+                height: "auto",
+                position: "absolute",
+              }}
+            />
+          </div>
         </div>
         <div>
           <p>
