@@ -1,12 +1,21 @@
 "use client";
 import styled from "styled-components";
 import { color } from "@/utils/colors";
+import { devices } from "@/utils/devices";
 
 export const Paragraph = styled.p.attrs<{}>(() => ({}))`
   font-size: 16px;
 `;
 export const ShowCardParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 14px;
+`;
+export const FooterParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
+  color: ${color.paragraphFooter};
+  text-align: center;
+
+  @media only screen and (${devices.tablet}) {
+    max-width: 54rem;
+  }
 `;
 export const HeroInspoText = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 32px;
