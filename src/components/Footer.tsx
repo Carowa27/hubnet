@@ -3,10 +3,17 @@ import hubnetLogo from "/public/assets/hubnet-white.png";
 import starCitizenLogo from "/public/assets/STARCITIZEN_WHITE.webp";
 import discordLogo from "/public/assets/icons/discord.svg";
 import Image from "next/image";
+import { color } from "@/utils/colors";
 
 export const Footer = () => {
   return (
-    <footer style={{ display: "flex", padding: "10px" }}>
+    <footer
+      style={{
+        display: "flex",
+        padding: "10px",
+        background: color.backgroundFooterAndHeader,
+      }}
+    >
       <section style={{ alignSelf: "center" }}>
         <img
           src={madeByCommunity.src}
