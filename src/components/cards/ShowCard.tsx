@@ -60,14 +60,16 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           </section>
         )}
         <section>
-          <h3 style={{ margin: 0, marginBottom: "5px" }}>{show.name}</h3>
+          <h3 style={{ margin: 0, marginBottom: "0px", fontSize: "20px" }}>
+            {show.name}
+          </h3>
           <p
-            style={{ margin: 0, paddingBottom: "10px" }}
+            style={{ margin: 0, paddingBottom: "10px", fontSize: "14px" }}
             className={`${homePage ? "" : "show-on-hover"}`}
           >
             {show.description}
           </p>
-          <section style={{ marginTop: "10px" }} className="show-on-hover">
+          <section className="show-on-hover">
             <YoutubeWatchButton url={show.playlistURL} />
           </section>
         </section>

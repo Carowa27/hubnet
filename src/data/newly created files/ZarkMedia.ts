@@ -25,7 +25,7 @@ export const HubwireGalactic = {
   name: "Hubwire Galactic",
   producer: ZarkMedia,
   description:
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "An on-going, narrative look at the real-life adventures of OVERCLOCKED star, Ava Huxley",
   backgroundImg: tempBackground.src,
   playlistURL:
     "https://www.youtube.com/playlist?list=PLxwkX_IXK1UYmGVTSjuMIPnJX8p9vBcqW",
