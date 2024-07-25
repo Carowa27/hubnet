@@ -31,10 +31,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-.card .show-on-hover {
+.card .show-card-hover {
   display: none;
 }
-.card:hover .show-on-hover {
+.card:hover .show-card-hover {
   display: block;
 }
 .card:hover {

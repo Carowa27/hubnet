@@ -35,7 +35,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
               gridAutoRows: "minmax(10px, auto)",
             }}
           >
-            <div className="show-on-hover" style={{ gridColumn: "1" }}>
+            <div className="show-card-hover" style={{ gridColumn: "1" }}>
               <h4 style={{ margin: 0, marginBottom: "5px" }}>PRODUCER</h4>
               <h4
                 style={{
@@ -65,11 +65,11 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           </h3>
           <p
             style={{ margin: 0, paddingBottom: "10px", fontSize: "14px" }}
-            className={`${homePage ? "" : "show-on-hover"}`}
+            className={`${homePage ? "" : "show-card-hover"}`}
           >
             {show.description}
           </p>
-          <section className="show-on-hover">
+          <section className="show-card-hover">
             <YoutubeWatchButton url={show.playlistURL} />
           </section>
         </section>
