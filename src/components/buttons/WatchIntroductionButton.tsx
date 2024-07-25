@@ -10,21 +10,31 @@ export const WatchIntroductionButton = ({ url }: Params) => {
   return (
     <>
       <ButtonSecondary
-        $bgcolor={color.darkBlue50Opacity}
-        $border={`1px solid ${color.buttonWhiteBackground}`}
+        $bgcolor={`none`}
+        $border={`none`}
         $color={color.white}
+        style={{ paddingLeft: 0 }}
       >
         <LinkDefault href={url}>
           <Paragraph
             style={{
               margin: "0",
+              fontSize: "20px",
+              display: "flex",
+              alignItems: "start",
             }}
           >
+            <span
+              style={{
+                paddingRight: "30px",
+                color: `${color.red}`,
+                textTransform: "capitalize",
+              }}
+            >
+              Watch introduction
+            </span>
             <span>
               {`[`} &gt; {`] `}
-            </span>
-            <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-              Watch introduction
             </span>
           </Paragraph>
         </LinkDefault>

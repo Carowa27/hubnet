@@ -1,4 +1,7 @@
-import { JoinUsButton } from "../buttons/JoinButton";
+import { color } from "@/utils/colors";
+import { JoinButton } from "../buttons/JoinButton";
+import { H3, Paragraph } from "../styled/Texts";
+import { WatchIntroductionButton } from "../buttons/WatchIntroductionButton";
 
 export const JoinCommunityCard = () => {
   return (
@@ -9,11 +12,10 @@ export const JoinCommunityCard = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          border: "1px solid lightGray",
-          padding: "15px",
+          background: color.backgroundCardHome,
+          padding: "15px 20px",
           borderRadius: "10px",
-          width: "auto",
-          maxWidth: "350px",
+          width: "365px",
         }}
       >
         <section
@@ -22,19 +24,16 @@ export const JoinCommunityCard = () => {
             flexDirection: "column",
           }}
         >
-          <h3 style={{ margin: "0" }}>JOIN OUR COMMUNITY</h3>
-          <p>
-            Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <H3 style={{ marginBottom: "20px", marginTop: "10px" }}>
+            JOIN OUR COMMUNITY
+          </H3>
+          <Paragraph style={{ marginBottom: "20px" }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <JoinUsButton />
+            aliquip ex ea commodo
+          </Paragraph>
+          <WatchIntroductionButton url={""} />
         </section>
       </article>
     </>

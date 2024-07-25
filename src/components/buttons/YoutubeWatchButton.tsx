@@ -26,6 +26,7 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
               style={{
                 paddingRight: "30px",
                 color: `${color.red}`,
+                textTransform: "capitalize",
               }}
             >
               Watch now
