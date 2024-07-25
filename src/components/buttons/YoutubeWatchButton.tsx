@@ -9,22 +9,19 @@ interface YTBParam {
 export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
-      <ButtonSecondary
-        $bgcolor={color.darkBlue50Opacity}
-        $border={`1px solid ${color.buttonWhiteBackground}`}
-        $color={color.white}
-      >
+      <ButtonSecondary $bgcolor={`none`} $border={`none`} $color={color.white}>
         <LinkDefault href={url}>
           <Paragraph
             style={{
               margin: "0",
+              fontSize: "20px",
             }}
           >
+            <span style={{ paddingRight: "30px", color: `${color.red}` }}>
+              Watch now
+            </span>
             <span>
               {`[`} &gt; {`] `}
-            </span>
-            <span style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-              Watch on Youtube
             </span>
           </Paragraph>
         </LinkDefault>
