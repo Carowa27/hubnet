@@ -1,6 +1,7 @@
 import { YoutubeWatchButton } from "../buttons/YoutubeWatchButton";
 import logo from "../../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
+import { color } from "@/utils/colors";
 
 interface ShowCardParams {
   show: Show;
@@ -16,11 +17,10 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: `${homePage ? "space-between" : "end"}`,
-          padding: "10px 15px",
+          padding: `${homePage ? "10px 20px" : "10px 15px"}`,
           borderRadius: "10px",
-          width: `${homePage ? "auto" : "281px"}`,
-          maxWidth: "350px",
-          height: `${homePage ? "250px" : "245px"}`,
+          width: `${homePage ? "350px" : "281px"}`,
+          height: `${homePage ? "310px" : "245px"}`,
           backgroundImage: `url(${show.backgroundImg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -35,24 +35,31 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
               gridAutoRows: "minmax(10px, auto)",
             }}
           >
-            <div className="show-card-hover" style={{ gridColumn: "1" }}>
-              <h4 style={{ margin: 0, marginBottom: "5px" }}>PRODUCER</h4>
+            <div
+              className="show-card-hover"
+              style={{ gridColumn: "1/3", marginTop: "10px" }}
+            >
+              <h4
+                style={{
+                  margin: 0,
+                  marginBottom: "0",
+                  color: `${color.paragraphColor}`,
+                }}
+              >
+                PRODUCED BY
+              </h4>
               <h4
                 style={{
                   margin: 0,
                   marginBottom: "5px",
-                  color: "#326BD9",
                 }}
               >
-                {show.producer.name}
+                {show.producer.name} <span>&gt;</span>
               </h4>
-              <p style={{ margin: 0, marginBottom: "10px", color: "#326BD9" }}>
-                Read more &gt;
-              </p>
             </div>
             <div style={{ gridColumn: "3", textAlign: "right" }}>
               <img
-                style={{ aspectRatio: "1/1", width: "40px" }}
+                style={{ aspectRatio: "1/1", width: "42px" }}
                 src={logo.src}
                 alt={`${show.name} logo`}
               />
@@ -60,7 +67,15 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           </section>
         )}
         <section>
-          <h3 style={{ fontSize: "20px" }} className={"show-card-title"}>
+          <h3
+            style={{
+              fontSize: "20px",
+              textTransform: "uppercase",
+            }}
+            className={`${
+              homePage ? "show-card-title-producer" : "show-card-title"
+            }`}
+          >
             {show.name}
           </h3>
           <p
