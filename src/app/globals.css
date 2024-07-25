@@ -37,6 +37,14 @@ body {
 .card:hover .show-card-hover {
   display: block;
 }
+.show-card-title {
+  padding-bottom: 10px;
+  margin: 0;
+}
+.card:hover .show-card-title {
+  padding-bottom: 0px;
+  margin: 0;
+}
 .card:hover {
   -webkit-box-shadow: 0px 4px 4px 0px #000000;
   -moz-box-shadow: 0px 4px 4px 0px #000000;

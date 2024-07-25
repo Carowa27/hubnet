@@ -60,7 +60,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
           </section>
         )}
         <section>
-          <h3 style={{ margin: 0, marginBottom: "0px", fontSize: "20px" }}>
+          <h3 style={{ fontSize: "20px" }} className={"show-card-title"}>
             {show.name}
           </h3>
           <p

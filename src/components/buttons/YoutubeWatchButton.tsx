@@ -9,7 +9,12 @@ interface YTBParam {
 export const YoutubeWatchButton = ({ url }: YTBParam) => {
   return (
     <>
-      <ButtonSecondary $bgcolor={`none`} $border={`none`} $color={color.white}>
+      <ButtonSecondary
+        $bgcolor={`none`}
+        $border={`none`}
+        $color={color.white}
+        style={{ paddingLeft: 0 }}
+      >
         <LinkDefault href={url}>
           <Paragraph
             style={{
@@ -17,7 +22,12 @@ export const YoutubeWatchButton = ({ url }: YTBParam) => {
               fontSize: "20px",
             }}
           >
-            <span style={{ paddingRight: "30px", color: `${color.red}` }}>
+            <span
+              style={{
+                paddingRight: "30px",
+                color: `${color.red}`,
+              }}
+            >
               Watch now
             </span>
             <span>
