@@ -14,7 +14,11 @@ interface ArrowRParams {
 export const ArrowLeftButton = ({ arrowFunction, start }: ArrowLParams) => {
   return (
     <>
-      <ButtonArrow disabled={start === 0} onClick={() => arrowFunction()}>
+      <ButtonArrow
+        disabled={start === 0}
+        onClick={() => arrowFunction()}
+        style={{ margin: "10px" }}
+      >
         {/* TODO: look up on mozilla,chrome & edge */}
         <ArrowIcon>&#706;</ArrowIcon>
       </ButtonArrow>
@@ -28,7 +32,11 @@ export const ArrowRightButton = ({
 }: ArrowRParams) => {
   return (
     <>
-      <ButtonArrow disabled={end === lastIndex} onClick={() => arrowFunction()}>
+      <ButtonArrow
+        disabled={end === lastIndex}
+        onClick={() => arrowFunction()}
+        style={{ margin: "10px" }}
+      >
         {/* TODO: look up on mozilla,chrome & edge */}
         <ArrowIcon>&#707;</ArrowIcon>
       </ButtonArrow>

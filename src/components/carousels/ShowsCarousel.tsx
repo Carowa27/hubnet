@@ -31,7 +31,14 @@ export const ShowsCarousel = ({ homePage }: ShowsCarouselParams) => {
 
   const totalDots = Math.ceil(Shows.length / 3);
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        paddingBottom: "15px",
+        paddingTop: "15px",
+      }}
+    >
       <section
         style={{
           display: "grid",
@@ -56,9 +63,11 @@ export const ShowsCarousel = ({ homePage }: ShowsCarouselParams) => {
           style={{
             gridColumn: "2/9",
             gridRow: "1",
-            gap: "10px",
+            gap: "15px",
             display: "flex",
             justifyContent: "space-evenly",
+            marginLeft: "15px",
+            marginRight: "15px",
           }}
         >
           {Shows.map((show, i) => {
@@ -84,9 +93,11 @@ export const ShowsCarousel = ({ homePage }: ShowsCarouselParams) => {
         </div>
         <div
           style={{
+            marginTop: "10px",
             gridColumn: "2/9",
             gridRow: "2",
             display: "flex",
+            gap: "15px",
             justifyContent: "center",
           }}
         >
