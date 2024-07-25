@@ -43,3 +43,17 @@ export const FooterContainer = styled.footer.attrs<{}>(() => ({}))`
     }
   }
 `;
+
+export const HeroContainer = styled.div.attrs<{
+  $bgimg: string;
+}>((props) => ({
+  $bgimg: props.$bgimg,
+}))`
+  background: url(${(props) => props.$bgimg});
+  min-height: 742px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

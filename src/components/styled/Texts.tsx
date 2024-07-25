@@ -22,6 +22,7 @@ export const FooterParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
 export const HeroInspoText = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 32px;
   text-transform: uppercase;
+  color: ${color.white};
 `;
 export const ArrowIcon = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 36px;

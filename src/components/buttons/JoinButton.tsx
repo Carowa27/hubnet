@@ -7,7 +7,7 @@ export const JoinButton = () => {
   return (
     <>
       <ButtonSecondary
-        $bgcolor={color.background}
+        $bgcolor={`none`}
         $border={`1px solid ${color.buttonWhiteBackground}`}
         $color={color.white}
       >
@@ -24,8 +24,14 @@ export const JoinButton = () => {
               alt="discord logo"
               style={{ height: "24px", width: "auto" }}
             />
-            <span style={{ paddingLeft: "10px", paddingRight: "10px" }}>
-              Join us now
+            <span
+              style={{
+                paddingLeft: "10px",
+                paddingRight: "10px",
+                color: color.white,
+              }}
+            >
+              Join our discord
             </span>
           </Paragraph>
         </LinkDefault>
