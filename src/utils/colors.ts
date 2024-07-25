@@ -20,4 +20,6 @@ export const color = {
   overlayCardFadeHover: "linear-gradient(to bottom, #2b2f3ecc, #2b2f3e)",
   // other
   darkBlue50Opacity: "#090b1150",
+
+  red: "#FF0000",
 };
