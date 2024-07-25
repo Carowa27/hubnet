@@ -13,9 +13,10 @@ export const ShowCardParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
 export const FooterParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
   color: ${color.paragraphFooter};
   text-align: center;
+  max-width: 54rem;
 
   @media only screen and (${devices.tablet}) {
-    max-width: 54rem;
+    max-width: 67rem;
   }
 `;
 export const HeroInspoText = styled(Paragraph).attrs<{}>(() => ({}))`
