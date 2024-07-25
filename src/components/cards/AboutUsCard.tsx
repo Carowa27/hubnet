@@ -1,4 +1,7 @@
+import { color } from "@/utils/colors";
 import { ConnectOnDiscordButton } from "../buttons/ConnectOnDiscordButton";
+import hubnetLogo from "../../../public/assets/hubnet-white-logo.png";
+import { H3, Paragraph } from "../styled/Texts";
 
 export const AboutUsCard = () => {
   return (
@@ -9,11 +12,10 @@ export const AboutUsCard = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          border: "1px solid lightGray",
-          padding: "15px",
+          background: color.backgroundCardHome,
+          padding: "15px 20px",
           borderRadius: "10px",
-          width: "auto",
-          maxWidth: "650px",
+          width: "720px",
         }}
       >
         <section
@@ -22,20 +24,36 @@ export const AboutUsCard = () => {
             flexDirection: "column",
           }}
         >
-          <h3 style={{ margin: "0" }}>ABOUT US</h3>
-          <p>
-            Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <H3 style={{ marginBottom: "20px", marginTop: "10px" }}>ABOUT US</H3>
+          <Paragraph style={{ width: "520px" }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <h4 style={{ marginTop: "0" }}>OUR PRODUCERS &gt;</h4>
-          <ConnectOnDiscordButton />
+            aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
+          </Paragraph>
+          <section
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "end",
+            }}
+          >
+            <div style={{ marginBottom: "10px" }}>
+              <h4 style={{ marginBottom: "20px", marginTop: "20px" }}>
+                OUR PRODUCERS &gt;
+              </h4>
+              <ConnectOnDiscordButton />
+            </div>
+            <div>
+              <img
+                src={hubnetLogo.src}
+                alt="Hubnet Logo"
+                style={{ width: "151px", height: "auto", opacity: "10%" }}
+              />
+            </div>
+          </section>
         </section>
       </article>
     </>

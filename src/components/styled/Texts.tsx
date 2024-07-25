@@ -5,6 +5,7 @@ import { devices } from "@/utils/devices";
 
 export const Paragraph = styled.p.attrs<{}>(() => ({}))`
   font-size: 16px;
+  color: ${color.paragraphColor};
 `;
 export const ShowCardParagraph = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 14px;
