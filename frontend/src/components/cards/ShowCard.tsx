@@ -4,6 +4,7 @@ import { Show } from "@/models/Show";
 import { color } from "@/utils/colors";
 import { CardSectionShow, CardShow } from "../styled/Cards";
 import { H3, ShowCardParagraph } from "../styled/Texts";
+import Image from "next/image";
 
 interface ShowCardParams {
   show: Show;
@@ -39,8 +40,10 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
               </h4>
             </div>
             <div style={{ gridColumn: "3", textAlign: "right" }}>
-              <img
-                style={{ aspectRatio: "1/1", width: "42px" }}
+              <Image
+                width={42}
+                height={0}
+                style={{ aspectRatio: "1/1", width: "42px", height: "auto" }}
                 src={logo.src}
                 alt={`${show.name} logo`}
               />

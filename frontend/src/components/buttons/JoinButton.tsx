@@ -2,6 +2,7 @@ import { color } from "@/utils/colors";
 import discordLogo from "/public/assets/icons/discord.svg";
 import { ButtonSecondary } from "../styled/Buttons";
 import { LinkDefault, Paragraph } from "../styled/Texts";
+import Image from "next/image";
 
 export const JoinButton = () => {
   return (
@@ -19,10 +20,12 @@ export const JoinButton = () => {
               alignItems: "center",
             }}
           >
-            <img
+            <Image
+              width={0}
+              height={24}
               src={discordLogo.src}
               alt="discord logo"
-              style={{ height: "24px", width: "auto" }}
+              style={{ width: "auto" }}
             />
             <span
               style={{
