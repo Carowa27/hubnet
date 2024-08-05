@@ -1,3 +1,4 @@
+import Image from "next/image";
 import discordLogo from "../../public/assets/discord-logo.png";
 
 export const DiscordOnlyMenu = () => {
@@ -13,11 +14,13 @@ export const DiscordOnlyMenu = () => {
           padding: "15px",
         }}
       >
-        <img
+        <Image
+          width={53}
+          height={0}
           src={discordLogo.src}
           alt="Discord Logo"
           style={{
-            height: "30px",
+            height: "auto",
           }}
         />
       </section>
@@ -43,11 +46,13 @@ export const DiscordAndProdMenu = () => {
         }}
       >
         <span>PRODUCERS</span>
-        <img
+        <Image
+          width={53}
+          height={0}
           src={discordLogo.src}
           alt="Discord Logo"
           style={{
-            height: "30px",
+            height: "auto",
           }}
         />
       </section>

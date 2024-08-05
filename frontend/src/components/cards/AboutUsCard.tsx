@@ -3,6 +3,7 @@ import { ConnectOnDiscordButton } from "../buttons/ConnectOnDiscordButton";
 import hubnetLogo from "../../../public/assets/hubnet-white-logo.png";
 import { H3, Paragraph } from "../styled/Texts";
 import { CardInfo, CardSection } from "../styled/Cards";
+import Image from "next/image";
 
 export const AboutUsCard = () => {
   return (
@@ -32,10 +33,12 @@ export const AboutUsCard = () => {
               <ConnectOnDiscordButton />
             </div>
             <div>
-              <img
+              <Image
                 src={hubnetLogo.src}
                 alt="Hubnet Logo"
-                style={{ width: "151px", height: "auto", opacity: "10%" }}
+                width={151}
+                height={0}
+                style={{ height: "auto", opacity: "10%" }}
               />
             </div>
           </section>

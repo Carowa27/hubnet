@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Shows } from "@/data/Shows";
+import Image from "next/image";
 
 export const ProdLogoCarousel = () => {
   const [start, setStart] = useState(0);
@@ -29,7 +30,9 @@ export const ProdLogoCarousel = () => {
                     marginRight: "5px",
                   }}
                 >
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     style={{
                       aspectRatio: "1/1",
                       width: "40px",
@@ -55,7 +58,9 @@ export const ProdLogoCarousel = () => {
                     marginRight: "5px",
                   }}
                 >
-                  <img
+                  <Image
+                    width={60}
+                    height={60}
                     style={{
                       aspectRatio: "1/1",
                       width: "60px",
@@ -81,7 +86,9 @@ export const ProdLogoCarousel = () => {
                     marginRight: "5px",
                   }}
                 >
-                  <img
+                  <Image
+                    width={80}
+                    height={80}
                     style={{
                       aspectRatio: "1/1",
                       width: "80px",

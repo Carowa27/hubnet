@@ -2,6 +2,7 @@ import { Socials } from "@/models/Producer";
 import discordlogo from "../../../public/assets/discord-logo.png";
 import { ButtonSocial } from "../styled/Buttons";
 import { LinkDefault } from "../styled/Texts";
+import Image from "next/image";
 
 interface SocialParams {
   socialType: Socials;
@@ -15,12 +16,15 @@ export const SocialButton = ({ socialType, url }: SocialParams) => {
       case "Discord":
         return discordlogo.src;
     }
+    return "";
   };
   return (
     <>
       <ButtonSocial>
         <LinkDefault href={url} style={{ height: "20px" }}>
-          <img
+          <Image
+            height={20}
+            width={20}
             src={logo(socialType)}
             alt={`${socialType} logo`}
             style={{ height: "20px", width: "auto" }}
