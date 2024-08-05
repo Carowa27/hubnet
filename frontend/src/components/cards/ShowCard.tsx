@@ -2,6 +2,8 @@ import { YoutubeWatchButton } from "../buttons/YoutubeWatchButton";
 import logo from "../../../public/assets/made-by-community-logo.png";
 import { Show } from "@/models/Show";
 import { color } from "@/utils/colors";
+import { CardSectionShow, CardShow } from "../styled/Cards";
+import { H3, ShowCardParagraph } from "../styled/Texts";
 
 interface ShowCardParams {
   show: Show;
@@ -11,30 +13,9 @@ interface ShowCardParams {
 export const ShowCard = ({ show, homePage }: ShowCardParams) => {
   return (
     <>
-      <article
-        className="card"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: `${homePage ? "space-between" : "end"}`,
-          padding: `${homePage ? "10px 20px" : "10px 15px"}`,
-          borderRadius: "10px",
-          width: `${homePage ? "350px" : "281px"}`,
-          height: `${homePage ? "310px" : "245px"}`,
-          backgroundImage: `url(${show.backgroundImg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
+      <CardShow className="card" $home={true} $bgImg={show.backgroundImg}>
         {homePage && (
-          <section
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3,1fr)",
-              gap: "10px",
-              gridAutoRows: "minmax(10px, auto)",
-            }}
-          >
+          <CardSectionShow>
             <div
               className="show-card-hover"
               style={{ gridColumn: "1/3", marginTop: "10px" }}
@@ -64,31 +45,27 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
                 alt={`${show.name} logo`}
               />
             </div>
-          </section>
+          </CardSectionShow>
         )}
         <section>
-          <h3
-            style={{
-              fontSize: "20px",
-              textTransform: "uppercase",
-            }}
+          <H3
             className={`${
               homePage ? "show-card-title-producer" : "show-card-title"
             }`}
           >
             {show.name}
-          </h3>
-          <p
-            style={{ margin: 0, paddingBottom: "10px", fontSize: "14px" }}
+          </H3>
+          <ShowCardParagraph
+            style={{ margin: 0, paddingBottom: "10px" }}
             className={`${homePage ? "" : "show-card-hover"}`}
           >
             {show.description}
-          </p>
+          </ShowCardParagraph>
           <section className="show-card-hover">
             <YoutubeWatchButton url={show.playlistURL} />
           </section>
         </section>
-      </article>
+      </CardShow>
     </>
   );
 };

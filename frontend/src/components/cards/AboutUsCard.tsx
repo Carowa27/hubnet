@@ -2,28 +2,13 @@ import { color } from "@/utils/colors";
 import { ConnectOnDiscordButton } from "../buttons/ConnectOnDiscordButton";
 import hubnetLogo from "../../../public/assets/hubnet-white-logo.png";
 import { H3, Paragraph } from "../styled/Texts";
+import { CardInfo, CardSection } from "../styled/Cards";
 
 export const AboutUsCard = () => {
   return (
     <>
-      <article
-        className="card"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: color.backgroundCardHome,
-          padding: "15px 20px",
-          borderRadius: "10px",
-          width: "720px",
-        }}
-      >
-        <section
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+      <CardInfo $bgColor={color.backgroundCardHome} $width="720px">
+        <CardSection>
           <H3 style={{ marginBottom: "20px", marginTop: "10px" }}>ABOUT US</H3>
           <Paragraph style={{ width: "520px" }}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -54,8 +39,8 @@ export const AboutUsCard = () => {
               />
             </div>
           </section>
-        </section>
-      </article>
+        </CardSection>
+      </CardInfo>
     </>
   );
 };

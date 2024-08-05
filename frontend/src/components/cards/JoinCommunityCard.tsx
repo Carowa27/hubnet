@@ -2,28 +2,13 @@ import { color } from "@/utils/colors";
 import { JoinButton } from "../buttons/JoinButton";
 import { H3, Paragraph } from "../styled/Texts";
 import { WatchIntroductionButton } from "../buttons/WatchIntroductionButton";
+import { CardInfo, CardSection } from "../styled/Cards";
 
 export const JoinCommunityCard = () => {
   return (
     <>
-      <article
-        className="card"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          background: color.backgroundCardHome,
-          padding: "15px 20px",
-          borderRadius: "10px",
-          width: "365px",
-        }}
-      >
-        <section
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+      <CardInfo $bgColor={color.backgroundCardHome} $width="365px">
+        <CardSection>
           <H3 style={{ marginBottom: "20px", marginTop: "10px" }}>
             JOIN OUR COMMUNITY
           </H3>
@@ -34,8 +19,8 @@ export const JoinCommunityCard = () => {
             aliquip ex ea commodo
           </Paragraph>
           <WatchIntroductionButton url={""} />
-        </section>
-      </article>
+        </CardSection>
+      </CardInfo>
     </>
   );
 };
