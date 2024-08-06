@@ -1,9 +1,12 @@
 import mongoose from "mongoose";
 
-const socialmediaSchema = new mongoose.Schema({
-  media: String,
-  URL: String,
-});
+const socialmediaSchema = new mongoose.Schema(
+  {
+    media: String,
+    URL: String,
+  },
+  { _id: false }
+);
 
 const producerSchema = new mongoose.Schema({
   name: {
