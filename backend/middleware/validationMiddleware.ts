@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { body, validationResult } from "express-validator";
 import { ValidationError } from "../utils/error";
+import { Producer } from "../models/Producer";
 
 export const validateProducer = [
   body("name")
@@ -14,23 +15,23 @@ export const validateProducer = [
     .notEmpty()
     .withMessage("description is required"),
   body("socialmedia")
-    .optional()
-    .custom((value) => {
-      if (typeof value !== "object") {
-        throw new Error("socialmedia must be an object");
-      }
-      if (!value.media || typeof value.media !== "string") {
-        throw new Error("media is required");
-      }
-      if (!value.URL || typeof value.URL !== "string") {
-        throw new Error("URL is required");
-      }
-      return true;
-    }),
-  body("socialmedia.URL")
-    .optional()
+    .exists()
+    .isArray()
+    .withMessage("socialmedia must be an array")
+    .optional(),
+  body("socialmedia.*")
+    .isObject()
+    .withMessage("socialmedia must contain objects"),
+  body("socialmedia.*.media")
+    .isString()
+    .withMessage("media must be of type string")
+    .notEmpty()
+    .withMessage("media is required"),
+  body("socialmedia.*.URL")
     .isURL()
-    .withMessage("socialmediaURL must be a valid URL"),
+    .withMessage("URL must be a valid URL")
+    .notEmpty()
+    .withMessage("URL is required"),
   body("cutout")
     .isString()
     .withMessage("value must be of type string")
@@ -52,7 +53,12 @@ export const validateProducer = [
 
 export const validateShow = [
   body("name").isString().notEmpty().withMessage("Name is required"),
-  body("producer").isString().notEmpty().withMessage("Producer is required"),
+  body("producer")
+    .notEmpty()
+    .custom(async (value) => {
+      const producer = await Producer.findById(value);
+      if (!producer) throw new Error("Producer do not exists");
+    }),
   body("description")
     .isString()
     .withMessage("value must be of type string")
@@ -64,10 +70,10 @@ export const validateShow = [
     .notEmpty()
     .withMessage("BackgroundImg is required"),
   body("playlistURL")
-    .isString()
-    .withMessage("value must be of type string")
+    .isURL()
+    .withMessage("playlistURL must be a valid URL")
     .notEmpty()
-    .withMessage("PlaylistURL is required"),
+    .withMessage("playlistURL is required"),
   (req: Request, res: Response, next: NextFunction) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
