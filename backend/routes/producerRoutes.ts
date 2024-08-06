@@ -8,7 +8,7 @@ import {
 } from "../controllers/producerController";
 
 router.get("/", getAllProducers);
-router.get("/:producerId", getProducer);
+router.get("/:id", getProducer);
 router.post("/", validateProducer, createProducer);
 
 export default router;
