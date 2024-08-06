@@ -18,7 +18,7 @@ const producerSchema = new mongoose.Schema({
     require: true,
   },
   socialmedia: {
-    type: socialmediaSchema,
+    type: [socialmediaSchema],
     require: false,
   },
   cutout: {
