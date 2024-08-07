@@ -55,6 +55,9 @@ export const validateShow = [
   body("name").isString().notEmpty().withMessage("Name is required"),
   body("producer")
     .notEmpty()
+    .withMessage("producer is required")
+    .isString()
+    .withMessage("value must be of type string")
     .custom(async (value) => {
       const producer = await Producer.findById(value);
       if (!producer) throw new Error("Producer do not exists");

@@ -6,9 +6,19 @@ const showSchema = new mongoose.Schema({
     require: true,
   },
   producer: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Producer",
-    require: true,
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Producer",
+      require: true,
+    },
+    name: {
+      type: String,
+      require: true,
+    },
+    logo: {
+      type: String,
+      require: true,
+    },
   },
   description: {
     type: String,

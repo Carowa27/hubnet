@@ -25,7 +25,7 @@ export const getProducer = async (
   try {
     const producer = await Producer.findById(req.params.id);
     if (!producer) throw new NotFoundError("Producer not found");
-    const shows = (await Show.find({ producer: req.params.id })) || [];
+    const shows = (await Show.find({ "producer.id": req.params.id })) || [];
     res.status(200).json({ producer, shows });
   } catch (error) {
     next(error);
