@@ -8,6 +8,7 @@ import showRoutes from "./routes/showRoutes";
 import helmet from "helmet";
 import cors from "cors";
 import { rateLimit } from "express-rate-limit";
+import mongoSanitize from "express-mongo-sanitize";
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -16,21 +17,20 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
+//update url when launching into production
 const corsOptions = {
-  //update url when launching into production
   origin: "http://localhost:3000/",
   optionsSuccessStatus: 200,
 };
-const port = process.env.PORT || 5000;
 
+const port = process.env.PORT || 5000;
 const app = express();
+
 app.use(cors(corsOptions));
 app.use(helmet());
 app.use(limiter);
-
 app.use(express.json());
-
-// headers
+app.use(mongoSanitize());
 
 app.use("/api/v1/hubnet/producers", producerRoutes);
 app.use("/api/v1/hubnet/shows", showRoutes);
