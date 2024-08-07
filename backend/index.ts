@@ -5,9 +5,28 @@ import mongoose from "mongoose";
 import { errorMiddleware } from "./middleware/errorMiddleware";
 import producerRoutes from "./routes/producerRoutes";
 import showRoutes from "./routes/showRoutes";
+import helmet from "helmet";
+import cors from "cors";
+import { rateLimit } from "express-rate-limit";
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+const corsOptions = {
+  //update url when launching into production
+  origin: "http://localhost:3000/",
+  optionsSuccessStatus: 200,
+};
+const port = process.env.PORT || 5000;
 
 const app = express();
-const port = process.env.PORT || 5000;
+app.use(cors(corsOptions));
+app.use(helmet());
+app.use(limiter);
 
 app.use(express.json());
 
