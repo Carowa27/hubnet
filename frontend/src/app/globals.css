@@ -25,6 +25,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #0e1015;
+  font-family: "Arial", sans-serif;
 }
 .card .show-card-hover {
   display: none;
