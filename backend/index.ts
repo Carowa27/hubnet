@@ -19,7 +19,7 @@ const limiter = rateLimit({
 
 //update url when launching into production
 const corsOptions = {
-  origin: "http://localhost:3000/",
+  origin: "http://localhost:3000",
   optionsSuccessStatus: 200,
 };
 
