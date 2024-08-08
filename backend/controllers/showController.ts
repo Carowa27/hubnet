@@ -11,7 +11,17 @@ export const getAllShows = async (
 ) => {
   try {
     const shows = await Show.find();
-    res.status(200).json(shows);
+    const formattedShows = shows.map((show) => {
+      return {
+        id: show._id,
+        name: show.name,
+        producer: show.producer,
+        description: show.description,
+        backgroundImg: show.backgroundImg,
+        playlistURL: show.playlistURL,
+      };
+    });
+    res.status(200).json({ shows: formattedShows });
   } catch (error) {
     next(error);
   }

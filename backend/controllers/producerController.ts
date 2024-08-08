@@ -11,7 +11,17 @@ export const getAllProducers = async (
 ) => {
   try {
     const producers = await Producer.find();
-    res.status(200).json(producers);
+    const formattedProducers = producers.map((producer) => {
+      return {
+        id: producer._id,
+        name: producer.name,
+        description: producer.description,
+        socialmedia: producer.socialmedia,
+        cutout: producer.cutout,
+        logo: producer.logo,
+      };
+    });
+    res.status(200).json({ producers: formattedProducers });
   } catch (error) {
     next(error);
   }
@@ -26,7 +36,24 @@ export const getProducer = async (
     const producer = await Producer.findById(req.params.id);
     if (!producer) throw new NotFoundError("Producer not found");
     const shows = (await Show.find({ "producer.id": req.params.id })) || [];
-    res.status(200).json({ producer, shows });
+    const sanitizedShows = shows.map((show) => {
+      return {
+        name: show.name,
+        description: show.description,
+        backgroundImg: show.backgroundImg,
+        playlistURL: show.playlistURL,
+      };
+    });
+    const formattedProducer = {
+      id: producer._id,
+      name: producer.name,
+      description: producer.description,
+      socialmedia: producer.socialmedia,
+      cutout: producer.cutout,
+      logo: producer.logo,
+      shows: sanitizedShows,
+    };
+    res.status(200).json({ producer: formattedProducer });
   } catch (error) {
     next(error);
   }
