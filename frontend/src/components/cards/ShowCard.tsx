@@ -14,7 +14,27 @@ interface ShowCardParams {
 export const ShowCard = ({ show, homePage }: ShowCardParams) => {
   return (
     <>
-      <CardShow className="card" $home={true} $bgImg={show.backgroundImg}>
+      <CardShow className="card" $home={true}>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: 0,
+          }}
+        >
+          <Image
+            src={show.backgroundImg}
+            alt={show.name}
+            style={{
+              objectFit: "cover",
+              borderRadius: "10px",
+            }}
+            layout="fill"
+          />
+        </div>
         {homePage && (
           <CardSectionShow>
             <div
@@ -50,7 +70,7 @@ export const ShowCard = ({ show, homePage }: ShowCardParams) => {
             </div>
           </CardSectionShow>
         )}
-        <section>
+        <section style={{ zIndex: 1 }}>
           <H3
             className={`${
               homePage ? "show-card-title-producer" : "show-card-title"

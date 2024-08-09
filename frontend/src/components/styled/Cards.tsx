@@ -15,16 +15,14 @@ const Card = styled.div.attrs<{}>(() => ({}))`
 `;
 
 export const CardShow = styled(Card).attrs<{
-  $bgImg: string;
   $home: boolean;
 }>((props) => ({
-  $bgImg: props.$bgImg,
   $home: props.$home,
 }))`
+  position: relative;
   justify-content: ${(props) => (props.$home ? "space-between" : "end")};
   width: ${(props) => (props.$home ? "350px" : "281px")};
   height: ${(props) => (props.$home ? "310px" : "245px")};
-  background-image: url(${(props) => props.$bgImg});
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -46,6 +44,7 @@ export const CardSection = styled.div.attrs<{}>(() => ({}))`
 `;
 
 export const CardSectionShow = styled(CardSection).attrs<{}>(() => ({}))`
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
