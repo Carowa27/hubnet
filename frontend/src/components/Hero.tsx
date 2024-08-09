@@ -1,5 +1,5 @@
 import { HeroContainer } from "./styled/Containers";
-import heroImg from "../../public/assets/temporary-background-home.jpg";
+import heroImg from "../../public/assets/temporary-background-home.png";
 import hubnetLogo from "../../public/assets/hubnet-white-logo.png";
 import { HeroInspoText } from "./styled/Texts";
 import { JoinButton } from "./buttons/JoinButton";

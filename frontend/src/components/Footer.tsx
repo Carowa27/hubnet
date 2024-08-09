@@ -1,6 +1,6 @@
 import madeByCommunity from "/public/assets/made-by-community-logo.png";
 import hubnetLogo from "/public/assets/hubnet-white.webp";
-import starCitizenLogo from "/public/assets/STARCITIZEN_WHITE.webp";
+import starCitizenLogo from "/public/assets/starcitizen-white.webp";
 import discordLogo from "/public/assets/icons/discord.svg";
 import Image from "next/image";
 import { FooterLargeLogoWrapper, IconWrapper } from "./styled/Images";

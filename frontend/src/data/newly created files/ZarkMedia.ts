@@ -1,7 +1,7 @@
 import { Socials } from "@/models/Producer";
-import hubwireGalacticCharacter from "../../../public/assets/HubwireGalactic/hubwire-galactic-character.png";
+import hubwireGalacticCharacter from "../../../public/assets/placeholder-cutout.png";
 import logo from "../../../public/assets/made-by-community-logo.png";
-import tempBackground from "../../../public/assets/temporary-background-home.jpg";
+import tempBackground from "../../../public/assets/placeholder-background-show.jpg";
 
 /*-- PRODUCER --*/
 export const ZarkMedia = {

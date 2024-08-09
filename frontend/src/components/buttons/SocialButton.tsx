@@ -1,5 +1,5 @@
 import { Socials } from "@/models/Producer";
-import discordlogo from "../../../public/assets/discord-logo.png";
+import discordlogo from "../../../public/assets/icons/discord.svg";
 import { ButtonSocial } from "../styled/Buttons";
 import { LinkDefault } from "../styled/Texts";
 import Image from "next/image";
