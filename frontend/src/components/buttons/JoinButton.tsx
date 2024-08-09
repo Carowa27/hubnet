@@ -23,7 +23,8 @@ export const JoinButton = () => {
             <Image
               width={0}
               height={24}
-              src={discordLogo.src}
+              priority={true}
+              src={discordLogo}
               alt="discord logo"
               style={{ width: "auto" }}
             />

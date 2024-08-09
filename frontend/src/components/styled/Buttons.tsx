@@ -38,7 +38,7 @@ export const ButtonArrow = styled(Button).attrs<{}>(() => ({}))`
   color: ${color.white};
   background: ${color.backgroundButton};
   aspect-ratio: 1/1;
-  height: 48px;
+  height: 3rem;
   padding: 0;
 
   &:disabled {
