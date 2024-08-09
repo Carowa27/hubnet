@@ -1,12 +1,9 @@
 import madeByCommunity from "/public/assets/made-by-community-logo.png";
-import hubnetLogo from "/public/assets/hubnet-white.png";
+import hubnetLogo from "/public/assets/hubnet-white.webp";
 import starCitizenLogo from "/public/assets/STARCITIZEN_WHITE.webp";
 import discordLogo from "/public/assets/icons/discord.svg";
 import Image from "next/image";
-import {
-  FooterLargeLogoWrapper,
-  FooterSmallLogoWrapper,
-} from "./styled/Images";
+import { FooterLargeLogoWrapper, IconWrapper } from "./styled/Images";
 import { FooterParagraph } from "./styled/Texts";
 import { FooterContainer } from "./styled/Containers";
 
@@ -14,7 +11,7 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <div>
-        <FooterSmallLogoWrapper>
+        <IconWrapper>
           <Image
             src={hubnetLogo}
             alt="Hubnet Logo"
@@ -26,9 +23,9 @@ export const Footer = () => {
               position: "absolute",
             }}
           />
-        </FooterSmallLogoWrapper>
+        </IconWrapper>
         <span>PRODUCERS</span>
-        <FooterSmallLogoWrapper>
+        <IconWrapper>
           <Image
             src={discordLogo}
             alt="Discord Logo"
@@ -40,7 +37,7 @@ export const Footer = () => {
               position: "absolute",
             }}
           />
-        </FooterSmallLogoWrapper>
+        </IconWrapper>
       </div>
       <FooterParagraph>
         The videos on this website are non-commercial fan productions. Star

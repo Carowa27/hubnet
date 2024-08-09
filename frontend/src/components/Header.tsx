@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
-import hubnetLogo from "../../public/assets/hubnet-white.png";
+import hubnetLogo from "/public/assets/hubnet-white.webp";
 import { DiscordAndProdMenu, DiscordOnlyMenu } from "./Menus";
 import { usePathname } from "next/navigation";
+import { IconWrapper } from "./styled/Images";
 
 export const Header = () => {
   const pathName = usePathname();
@@ -15,15 +16,19 @@ export const Header = () => {
         margin: "10px",
       }}
     >
-      <section>
+      <IconWrapper>
         <Image
-          width={105}
-          height={0}
-          src={hubnetLogo.src}
+          src={hubnetLogo}
           alt="Hubnet Logo"
-          style={{ height: "auto" }}
+          width={0}
+          height={0}
+          style={{
+            width: "auto",
+            height: "100%",
+            position: "absolute",
+          }}
         />
-      </section>
+      </IconWrapper>
       <section
         style={{
           display: "flex",

@@ -9,10 +9,10 @@ export const FooterLargeLogoWrapper = styled.div.attrs<{}>(() => ({}))`
   height: 7rem;
 `;
 
-export const FooterSmallLogoWrapper = styled.div.attrs<{}>(() => ({}))`
+export const IconWrapper = styled.div.attrs<{}>(() => ({}))`
   position: relative;
   display: flex;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 1.7rem;
+  height: 1.7rem;
 `;

@@ -13,8 +13,8 @@ export const FooterContainer = styled.footer.attrs<{}>(() => ({}))`
   background: ${color.backgroundFooterAndHeader};
 
   @media only screen and (${devices.tablet}) {
-    padding: 2rem 12rem;
-    gap: 1rem;
+    padding: 3rem 12rem;
+    gap: 3rem;
   }
 
   // footer nav
