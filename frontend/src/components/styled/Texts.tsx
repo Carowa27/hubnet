@@ -23,6 +23,7 @@ export const HeroInspoText = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 32px;
   text-transform: uppercase;
   color: ${color.white};
+  text-align: center;
 `;
 export const ArrowIcon = styled(Paragraph).attrs<{}>(() => ({}))`
   font-size: 36px;
